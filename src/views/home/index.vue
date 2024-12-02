@@ -14,26 +14,26 @@ const gap = computed(() => (appStore.isMobile ? 0 : 16));
 </script>
 
 <template>
-  <ElSpace direction="vertical" fill :size="16">
-    <HeaderBanner />
-    <CardData />
+  <ElSpace direction="vertical" fill class="pb-0" :size="0">
+    <HeaderBanner class="mb-16px" />
+    <CardData class="mb-16px" />
     <ElRow :gutter="gap">
-      <ElCol :lg="14" :sm="24">
+      <ElCol :lg="14" :sm="24" class="mb-16px">
         <ElCard shadow="never" class="card-wrapper">
           <LineChart />
         </ElCard>
       </ElCol>
-      <ElCol :lg="10" :sm="24">
+      <ElCol :lg="10" :sm="24" class="mb-16px">
         <ElCard shadow="never" class="card-wrapper">
           <PieChart />
         </ElCard>
       </ElCol>
     </ElRow>
     <ElRow :gutter="gap">
-      <ElCol :lg="14" :sm="24">
+      <ElCol :lg="14" :sm="24" class="mb-16px">
         <ProjectNews />
       </ElCol>
-      <ElCol :lg="10" :sm="24">
+      <ElCol :lg="10" :sm="24" class="mb-16px">
         <CreativityBanner />
       </ElCol>
     </ElRow>

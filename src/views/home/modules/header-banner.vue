@@ -26,7 +26,7 @@ const statisticData = computed<StatisticData[]>(() => [
 
 <template>
   <ElCard shadow="never" class="card-wrapper">
-    <ElRow :gutter="gap">
+    <ElRow :gutter="gap" class="px-8px">
       <ElCol :md="18" :sm="24">
         <div class="flex-y-center">
           <div class="size-72px shrink-0 overflow-hidden rd-1/2">
@@ -41,7 +41,7 @@ const statisticData = computed<StatisticData[]>(() => [
         </div>
       </ElCol>
       <ElCol :md="6" :sm="24">
-        <ElSpace direction="horizontal" :size="24">
+        <ElSpace direction="horizontal" class="w-full justify-end" :size="24">
           <ElStatistic v-for="item in statisticData" :key="item.id" class="whitespace-nowrap" v-bind="item" />
         </ElSpace>
       </ElCol>
