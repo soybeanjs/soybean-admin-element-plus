@@ -1,7 +1,7 @@
 import { computed, effectScope, onScopeDispose, ref, toRefs, watch } from 'vue';
 import type { Ref } from 'vue';
 import { defineStore } from 'pinia';
-import { useDark, useEventListener, usePreferredColorScheme } from '@vueuse/core';
+import { useEventListener, usePreferredColorScheme } from '@vueuse/core';
 import { getPaletteColorByNumber } from '@sa/color';
 import { SetupStoreId } from '@/enum';
 import { localStg } from '@/utils/storage';
@@ -64,9 +64,6 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
     themeStore.$reset();
   }
 
-  // html class dark mode
-  const isDark = useDark();
-
   /**
    * Set theme scheme
    *
@@ -74,7 +71,6 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
    */
   function setThemeScheme(themeScheme: UnionKey.ThemeScheme) {
     settings.value.themeScheme = themeScheme;
-    isDark.value = themeScheme === 'dark';
   }
 
   /**

@@ -54,12 +54,12 @@ const swatches: string[] = [
         </p>
       </template>
       <SettingItem key="recommend-color" :label="$t('theme.recommendColor')">
-        <ElSwitch v-model:value="themeStore.recommendColor" />
+        <ElSwitch v-model="themeStore.recommendColor" />
       </SettingItem>
     </ElTooltip>
     <SettingItem v-for="(_, key) in themeStore.themeColors" :key="key" :label="$t(`theme.themeColor.${key}`)">
       <template v-if="key === 'info'" #suffix>
-        <ElCheckbox v-model:checked="themeStore.isInfoFollowPrimary">
+        <ElCheckbox v-model="themeStore.isInfoFollowPrimary">
           {{ $t('theme.themeColor.followPrimary') }}
         </ElCheckbox>
       </template>
