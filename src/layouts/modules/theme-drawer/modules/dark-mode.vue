@@ -44,14 +44,14 @@ const showSiderInverted = computed(() => !themeStore.darkMode && themeStore.layo
     </div>
     <Transition name="sider-inverted">
       <SettingItem v-if="showSiderInverted" :label="$t('theme.sider.inverted')">
-        <ElSwitch v-model:value="themeStore.sider.inverted" />
+        <ElSwitch v-model="themeStore.sider.inverted" />
       </SettingItem>
     </Transition>
     <SettingItem :label="$t('theme.grayscale')">
-      <ElSwitch :value="themeStore.grayscale" @update:value="handleGrayscaleChange" />
+      <ElSwitch v-model:model-value="themeStore.grayscale" :update:model-value="handleGrayscaleChange" />
     </SettingItem>
     <SettingItem :label="$t('theme.colourWeakness')">
-      <ElSwitch :value="themeStore.colourWeakness" @update:value="handleColourWeaknessChange" />
+      <ElSwitch v-model:model-value="themeStore.colourWeakness" :update:model-value="handleColourWeaknessChange" />
     </SettingItem>
   </div>
 </template>

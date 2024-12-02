@@ -70,6 +70,7 @@ declare module 'vue' {
     IconAntDesignSettingOutlined: typeof import('~icons/ant-design/setting-outlined')['default']
     IconCarbonAdd: typeof import('~icons/carbon/add')['default']
     'IconCharm:download': typeof import('~icons/charm/download')['default']
+    'IconFileIcons:microsoftExcel': typeof import('~icons/file-icons/microsoft-excel')['default']
     IconGridiconsFullscreen: typeof import('~icons/gridicons/fullscreen')['default']
     IconGridiconsFullscreenExit: typeof import('~icons/gridicons/fullscreen-exit')['default']
     'IconIc:roundPlus': typeof import('~icons/ic/round-plus')['default']

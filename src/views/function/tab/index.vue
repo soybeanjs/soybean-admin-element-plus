@@ -52,7 +52,7 @@ function resetTabLabel() {
     </ElCard>
     <ElCard shadow="never" :header="$t('page.function.tab.tabTitle.title')" size="small" segmented class="card-wrapper">
       <ElDivider content-position="left">{{ $t('page.function.tab.tabTitle.changeTitle') }}</ElDivider>
-      <ElInput v-model:value="tabLabel" class="max-w-240px">
+      <ElInput v-model="tabLabel" class="max-w-240px">
         <template #append>
           <ElButton type="primary" @click="changeTabLabel">{{ $t('page.function.tab.tabTitle.change') }}</ElButton>
         </template>

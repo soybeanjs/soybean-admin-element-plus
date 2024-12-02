@@ -74,10 +74,13 @@ $radius: 6px;
       background-color: var(--el-menu-item-hover-fill);
     }
   }
-  li.el-menu-item.is-active,
-  li.el-menu-item.is-active:hover {
-    &::before {
-      background-color: var(--el-menu-hover-bg-color);
+  li.el-menu-item {
+    margin-top: 6px;
+    &.is-active,
+    &.is-active:hover {
+      &::before {
+        background-color: var(--el-menu-hover-bg-color);
+      }
     }
   }
 }
