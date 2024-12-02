@@ -5,9 +5,7 @@ import { useThemeStore } from '@/store/modules/theme';
 import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
 import GlobalLogo from '../global-logo/index.vue';
 
-defineOptions({
-  name: 'GlobalSider'
-});
+defineOptions({ name: 'GlobalSider' });
 
 const appStore = useAppStore();
 const themeStore = useThemeStore();

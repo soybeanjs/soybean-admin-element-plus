@@ -1,6 +1,7 @@
 $radius: 6px;
 
-:root {
+html:root,
+html.dark:root {
   --el-color-primary: rgb(var(--primary-color));
   --el-color-primary-light-3: rgb(var(--primary-400-color));
   --el-color-primary-light-5: rgb(var(--primary-300-color));
@@ -34,6 +35,15 @@ $radius: 6px;
   --el-menu-item-hover-fill: rgba(0, 0, 0, 0.05);
 
   --el-menu-item-height: 42px;
+}
+
+.bg-inverted {
+  .el-menu {
+    // --el-menu-bg-color: var(--el-fill-color-blank);
+    // --el-menu-text-color: var(--el-text-color-primary);
+    --el-menu-bg-color: transparent;
+    --el-menu-text-color: #e5eaf3;
+  }
 }
 
 :focus-visible {
