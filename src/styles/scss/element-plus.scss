@@ -36,6 +36,13 @@ html.dark:root {
 
   --el-menu-item-height: 42px;
 }
+html.dark:root {
+  --el-color-primary-light-9: transparent;
+  --el-color-success-light-9: transparent;
+  --el-color-warning-light-9: transparent;
+  --el-color-info-light-9: transparent;
+  --el-color-danger-light-9: transparent;
+}
 
 .bg-inverted {
   .el-menu {
