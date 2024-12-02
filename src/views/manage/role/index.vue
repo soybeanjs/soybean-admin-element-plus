@@ -56,7 +56,7 @@ const {
       label: $t('common.operate'),
       width: 130,
       formatter: row => (
-        <div class="flex-center gap-8px">
+        <div class="flex-center">
           <ElButton type="primary" plain size="small" onClick={() => edit(row.id)}>
             {$t('common.edit')}
           </ElButton>

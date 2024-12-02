@@ -108,7 +108,7 @@ const { columns, columnChecks, data, loading, pagination, getData, getDataByPage
       label: $t('common.operate'),
       width: 230,
       formatter: row => (
-        <div class="flex-center justify-end gap-8px">
+        <div class="flex-center justify-end">
           {row.menuType === '1' && (
             <ElButton type="primary" plain size="small" onClick={() => handleAddChildMenu(row)}>
               {$t('page.manage.menu.addChildMenu')}
