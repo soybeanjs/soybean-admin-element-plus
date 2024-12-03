@@ -37,7 +37,7 @@ const toggleStop = () => {
     </ElButton>
     <ElSpace class="justify-center">
       <span>{{ $t('page.alova.scenes.refreshTime') }}: {{ data.time || '--' }}</span>
-      <ElSpin v-if="loading" :size="12" />
+      <SvgIcon v-if="loading" icon="line-md:loading-twotone-loop" class="text-20px" />
     </ElSpace>
   </ElSpace>
 </template>

@@ -58,11 +58,11 @@ async function handleSubmit() {
         </ElButton>
       </div>
     </ElFormItem>
-    <NSpace vertical :size="18" class="w-full">
+    <ElSpace vertical :size="18" class="w-full">
       <ElButton type="primary" size="large" round block :loading="submiting" @click="handleSubmit">
         {{ $t('common.confirm') }}
       </ElButton>
-    </NSpace>
+    </ElSpace>
   </ElForm>
 </template>
 
