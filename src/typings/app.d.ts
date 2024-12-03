@@ -20,6 +20,8 @@ declare namespace App {
       otherColor: OtherColor;
       /** Whether info color is followed by the primary color */
       isInfoFollowPrimary: boolean;
+      /** Reset cache strategy */
+      resetCacheStrategy?: UnionKey.ResetCacheStrategy;
       /** Layout */
       layout: {
         /** Layout mode */
@@ -388,6 +390,7 @@ declare namespace App {
         };
         themeDrawerTitle: string;
         pageFunTitle: string;
+        resetCacheStrategy: { title: string } & Record<UnionKey.ResetCacheStrategy, string>;
         configOperation: {
           copyConfig: string;
           copySuccessMsg: string;
@@ -521,6 +524,20 @@ declare namespace App {
             repeatedError: string;
             repeatedErrorMsg1: string;
             repeatedErrorMsg2: string;
+          };
+        };
+        alova: {
+          scenes: {
+            captchaSend: string;
+            autoRequest: string;
+            visibilityRequestTips: string;
+            pollingRequestTips: string;
+            networkRequestTips: string;
+            refreshTime: string;
+            startRequest: string;
+            stopRequest: string;
+            requestCrossComponent: string;
+            triggerAllRequest: string;
           };
         };
         manage: {

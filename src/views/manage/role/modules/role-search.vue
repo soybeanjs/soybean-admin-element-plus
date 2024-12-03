@@ -3,9 +3,7 @@ import { $t } from '@/locales';
 import { enableStatusOptions } from '@/constants/business';
 import { translateOptions } from '@/utils/common';
 
-defineOptions({
-  name: 'RoleSearch'
-});
+defineOptions({ name: 'RoleSearch' });
 
 interface Emits {
   (e: 'reset'): void;
@@ -29,7 +27,7 @@ function search() {
   <ElCard shadow="never" class="card-wrapper">
     <ElCollapse :default-expanded-names="['role-search']">
       <ElCollapseItem :title="$t('common.search')" name="role-search">
-        <ElForm :model="model" label-placement="left" :label-width="80">
+        <ElForm :model="model" label-position="right" :label-width="80">
           <ElRow :gutter="24">
             <ElCol :lg="6" :md="8" :sm="12">
               <ElFormItem :label="$t('page.manage.role.roleName')" prop="roleName">

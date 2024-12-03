@@ -127,6 +127,10 @@ function handleDelete(id: number) {
   onDeleted();
 }
 
+setTimeout(() => {
+  console.log(130, mobilePagination);
+});
+
 function edit(id: number) {
   handleEdit(id);
 }

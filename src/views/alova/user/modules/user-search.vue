@@ -8,7 +8,6 @@ import { translateOptions } from '@/utils/common';
 defineOptions({ name: 'UserSearch' });
 
 interface Emits {
-  (e: 'reset'): void;
   (e: 'search'): void;
 }
 
@@ -17,6 +16,8 @@ const emit = defineEmits<Emits>();
 const { formRef, validate, restoreValidation } = useForm();
 
 const model = defineModel<Api.SystemManage.UserSearchParams>('model', { required: true });
+
+const initialParams = { ...model.value };
 
 type RuleKey = Extract<keyof Api.SystemManage.UserSearchParams, 'userEmail' | 'userPhone'>;
 
@@ -31,7 +32,7 @@ const rules = computed<Record<RuleKey, App.Global.FormRule>>(() => {
 
 async function reset() {
   await restoreValidation();
-  emit('reset');
+  Object.assign(model.value, initialParams);
 }
 
 async function search() {
@@ -41,8 +42,8 @@ async function search() {
 </script>
 
 <template>
-  <ElCard shadow="never" :bordered="false" size="small" class="card-wrapper">
-    <ElCollapse>
+  <ElCard shadow="never" size="small" class="card-wrapper">
+    <ElCollapse :default-expanded-names="['user-search']">
       <ElCollapseItem :title="$t('common.search')" name="user-search">
         <ElForm ref="formRef" :model="model" :rules="rules" label-position="right" :label-width="80">
           <ElRow :gutter="24">
@@ -51,14 +52,14 @@ async function search() {
                 <ElInput v-model="model.userName" :placeholder="$t('page.manage.user.form.userName')" />
               </ElFormItem>
             </ElCol>
-            <ElCol :lg="6" :md="8" :sm="12" :label="$t('page.manage.user.userGender')">
+            <ElCol :lg="6" :md="8" :sm="12">
               <ElFormItem :label="$t('page.manage.user.userGender')" prop="userGender">
-                <ElSelect v-model="model.userGender" clearable :placeholder="$t('page.manage.user.form.userGender')">
+                <ElSelect v-model="model.userGender" :placeholder="$t('page.manage.user.form.userGender')" clearable>
                   <ElOption
-                    v-for="(item, idx) in translateOptions(userGenderOptions)"
-                    :key="idx"
-                    :label="item.label"
-                    :value="item.value"
+                    v-for="{ label, value } in translateOptions(userGenderOptions)"
+                    :key="value"
+                    :label="label"
+                    :value="value"
                   ></ElOption>
                 </ElSelect>
               </ElFormItem>
@@ -79,8 +80,8 @@ async function search() {
               </ElFormItem>
             </ElCol>
             <ElCol :lg="6" :md="8" :sm="12">
-              <ElFormItem :label="$t('page.manage.user.userStatus')" prop="userStatus">
-                <ElSelect v-model="model.userGender" clearable :placeholder="$t('page.manage.user.form.userStatus')">
+              <ElFormItem :label="$t('page.manage.user.userGender')" prop="userStatus">
+                <ElSelect v-model="model.status" :placeholder="$t('page.manage.user.form.userStatus')" clearable>
                   <ElOption
                     v-for="{ label, value } in translateOptions(enableStatusOptions)"
                     :key="value"
