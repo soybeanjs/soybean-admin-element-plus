@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue';
+import { computed, ref } from 'vue';
 import { $t } from '@/locales';
 import { useRouterPush } from '@/hooks/common/router';
 import { useForm, useFormRules } from '@/hooks/common/form';
@@ -16,7 +16,7 @@ interface FormModel {
   code: string;
 }
 
-const model: FormModel = reactive({ phone: '', code: '' });
+const model = ref<FormModel>({ phone: '', code: '' });
 
 const rules = computed<Record<keyof FormModel, App.Global.FormRule[]>>(() => {
   const { formRules } = useFormRules();

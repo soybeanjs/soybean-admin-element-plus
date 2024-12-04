@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue';
+import { computed, ref } from 'vue';
 import { $t } from '@/locales';
 import { loginModuleRecord } from '@/constants/app';
 import { useRouterPush } from '@/hooks/common/router';
@@ -17,13 +17,13 @@ interface FormModel {
   password: string;
 }
 
-const model: FormModel = reactive({
+const model = ref<FormModel>({
   userName: 'Soybean',
   password: '123456'
 });
 
 const rules = computed<Record<keyof FormModel, App.Global.FormRule[]>>(() => {
-  // inside computed to make locale reactive, if not apply i18n, you can define it without computed
+  // inside computed to make locale ref, if not apply i18n, you can define it without computed
   const { formRules } = useFormRules();
 
   return {
@@ -34,7 +34,7 @@ const rules = computed<Record<keyof FormModel, App.Global.FormRule[]>>(() => {
 
 async function handleSubmit() {
   await validate();
-  await authStore.login(model.userName, model.password);
+  await authStore.login(model.value.userName, model.value.password);
 }
 
 type AccountKey = 'super' | 'admin' | 'user';

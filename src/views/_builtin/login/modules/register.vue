@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { computed, reactive } from 'vue';
+import { computed, ref } from 'vue';
 import { $t } from '@/locales';
 import { useRouterPush } from '@/hooks/common/router';
 import { useForm, useFormRules } from '@/hooks/common/form';
@@ -18,7 +18,7 @@ interface FormModel {
   confirmPassword: string;
 }
 
-const model: FormModel = reactive({
+const model = ref<FormModel>({
   phone: '',
   code: '',
   password: '',
@@ -32,7 +32,7 @@ const rules = computed<Record<keyof FormModel, App.Global.FormRule[]>>(() => {
     phone: formRules.phone,
     code: formRules.code,
     password: formRules.pwd,
-    confirmPassword: createConfirmPwdRule(model.password)
+    confirmPassword: createConfirmPwdRule(model.value.password)
   };
 });
 

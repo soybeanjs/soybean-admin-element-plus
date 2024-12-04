@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { nextTick, reactive, ref, watch } from 'vue';
+import { nextTick, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useElementBounding } from '@vueuse/core';
 import { PageTab } from '@sa/materials';
@@ -98,7 +98,7 @@ interface DropdownConfig {
   tabId: string;
 }
 
-const dropdown: DropdownConfig = reactive({
+const dropdown = ref<DropdownConfig>({
   visible: false,
   x: 0,
   y: 0,
@@ -106,7 +106,7 @@ const dropdown: DropdownConfig = reactive({
 });
 
 function setDropdown(config: Partial<DropdownConfig>) {
-  Object.assign(dropdown, config);
+  Object.assign(dropdown.value, config);
 }
 
 let isClickContextMenu = false;
@@ -124,7 +124,7 @@ async function handleContextMenu(e: MouseEvent, tabId: string) {
 
   isClickContextMenu = true;
 
-  const DURATION = dropdown.visible ? 150 : 0;
+  const DURATION = dropdown.value.visible ? 150 : 0;
 
   setDropdown({ visible: false });
 

@@ -1,7 +1,7 @@
 <script setup lang="tsx">
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { usePagination } from '@sa/alova/client';
-import { reactive } from 'vue';
+import { ref } from 'vue';
 import { batchDeleteUser, deleteUser, fetchGetUserList } from '@/service-alova/api';
 import { $t } from '@/locales';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
@@ -10,7 +10,7 @@ import useTableOperate from './hooks/use-table-operate';
 import UserOperateDrawer from './modules/user-operate-drawer.vue';
 import UserSearch from './modules/user-search.vue';
 
-const searchParams = reactive({
+const searchParams = ref({
   status: undefined,
   userName: undefined,
   userGender: undefined,
@@ -21,7 +21,7 @@ const searchParams = reactive({
 const { loading, data, refresh, reload, page, pageSize, pageCount, send, remove, total } = usePagination(
   (pageNum, size) =>
     fetchGetUserList({
-      ...searchParams,
+      ...searchParams.value,
       current: pageNum,
       size
     }),
@@ -29,7 +29,7 @@ const { loading, data, refresh, reload, page, pageSize, pageCount, send, remove,
     data: ({ records }) => records,
 
     // trigger reload when states in `searchParams` changed
-    watchingStates: [searchParams],
+    watchingStates: [searchParams.value],
 
     // debounce of `searchParams`
     debounce: [1000]
