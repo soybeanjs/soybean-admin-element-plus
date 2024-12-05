@@ -28,7 +28,7 @@ const watermarkProps = computed<WatermarkProps>(() => {
 </script>
 
 <template>
-  <ElConfigProvider :locale="locale" class="h-full">
+  <ElConfigProvider :locale="locale">
     <AppProvider>
       <ElWatermark v-if="themeStore.watermark?.visible" v-bind="watermarkProps">
         <RouterView class="bg-layout" />
