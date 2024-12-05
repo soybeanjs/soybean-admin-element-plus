@@ -406,6 +406,15 @@ export const generatedRoutes: GeneratedRoute[] = [
         },
         children: [
           {
+            name: 'plugin_charts_antv',
+            path: '/plugin/charts/antv',
+            component: 'view.plugin_charts_antv',
+            meta: {
+              title: 'plugin_charts_antv',
+              i18nKey: 'route.plugin_charts_antv'
+            }
+          },
+          {
             name: 'plugin_charts_echarts',
             path: '/plugin/charts/echarts',
             component: 'view.plugin_charts_echarts',

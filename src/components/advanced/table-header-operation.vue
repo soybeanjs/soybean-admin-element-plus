@@ -37,7 +37,6 @@ function refresh() {
 </script>
 
 <template>
-  <!-- <NSpace :align="itemAlign" wrap justify="end" class="lt-sm:w-200px"> -->
   <ElSpace direction="horizontal" wrap justify="end" class="lt-sm:w-200px">
     <slot name="prefix"></slot>
     <slot name="default">
