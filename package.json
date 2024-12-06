@@ -23,9 +23,6 @@
     "TypeScript",
     "element-plus",
     "element-plus-admin",
-    "naive-ui",
-    "naive-ui-admin",
-    "ant-design-vue v4",
     "UnoCSS"
   ],
   "engines": {
@@ -129,5 +126,5 @@
   "lint-staged": {
     "*": "eslint --fix"
   },
-  "website": "https://admin.soybeanjs.cn"
+  "website": "https://elp.soybeanjs.cn"
 }
