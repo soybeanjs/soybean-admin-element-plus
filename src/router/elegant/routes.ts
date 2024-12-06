@@ -411,7 +411,8 @@ export const generatedRoutes: GeneratedRoute[] = [
             component: 'view.plugin_charts_antv',
             meta: {
               title: 'plugin_charts_antv',
-              i18nKey: 'route.plugin_charts_antv'
+              i18nKey: 'route.plugin_charts_antv',
+              icon: 'hugeicons:flow-square'
             }
           },
           {

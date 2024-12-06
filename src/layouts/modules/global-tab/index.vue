@@ -11,9 +11,7 @@ import { useTabStore } from '@/store/modules/tab';
 import { isPC } from '@/utils/agent';
 import ContextMenu from './context-menu.vue';
 
-defineOptions({
-  name: 'GlobalTab'
-});
+defineOptions({ name: 'GlobalTab' });
 
 const route = useRoute();
 const appStore = useAppStore();
@@ -84,7 +82,10 @@ function getContextMenuDisabledKeys(tabId: string) {
 
 async function handleCloseTab(tab: App.Global.Tab) {
   await tabStore.removeTab(tab.id);
-  await routeStore.reCacheRoutesByKey(tab.routeKey);
+
+  if (themeStore.resetCacheStrategy === 'close') {
+    routeStore.resetRouteCache(tab.routeKey);
+  }
 }
 
 async function refresh() {

@@ -6,9 +6,7 @@ import { useThemeStore } from '@/store/modules/theme';
 import { useRouteStore } from '@/store/modules/route';
 import { useTabStore } from '@/store/modules/tab';
 
-defineOptions({
-  name: 'GlobalContent'
-});
+defineOptions({ name: 'GlobalContent' });
 
 interface Props {
   /** Show padding for content */
@@ -42,7 +40,7 @@ function resetScroll() {
       @after-leave="resetScroll"
       @after-enter="appStore.setContentXScrollable(false)"
     >
-      <KeepAlive :include="routeStore.cacheRoutes">
+      <KeepAlive :include="routeStore.cacheRoutes" :exclude="routeStore.excludeCacheRoutes">
         <component
           :is="Component"
           v-if="appStore.reloadFlag"
