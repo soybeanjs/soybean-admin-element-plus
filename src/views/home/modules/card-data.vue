@@ -76,7 +76,7 @@ function getGradientColor(color: CardData['color']) {
 </script>
 
 <template>
-  <ElCard shadow="never" size="small" class="card-wrapper">
+  <ElCard class="card-wrapper">
     <!-- define component start: GradientBg -->
     <DefineGradientBg v-slot="{ $slots, gradientColor }">
       <div class="rd-8px px-16px pb-4px pt-8px text-white" :style="{ backgroundImage: gradientColor }">

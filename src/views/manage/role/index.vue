@@ -109,7 +109,7 @@ function edit(id: number) {
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <RoleSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
-    <ElCard shadow="never" :header="$t('page.manage.role.title')" class="sm:flex-1-hidden card-wrapper">
+    <ElCard :header="$t('page.manage.role.title')" class="sm:flex-1-hidden card-wrapper">
       <template #header-extra>
         <TableHeaderOperation
           v-model:columns="columnChecks"

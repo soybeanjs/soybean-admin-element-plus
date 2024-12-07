@@ -40,7 +40,7 @@ onUnmounted(() => {
 
 <template>
   <div class="h-full">
-    <ElCard shadow="never" header="markdown插件" class="card-wrapper">
+    <ElCard header="markdown插件" class="card-wrapper">
       <div ref="domRef"></div>
       <template #footer>
         <GithubLink link="https://github.com/Vanessa219/vditor" />

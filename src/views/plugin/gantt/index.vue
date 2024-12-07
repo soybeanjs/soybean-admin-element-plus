@@ -153,13 +153,7 @@ onMounted(() => {
 
 <template>
   <div class="overflow-hidden lt-sm:overflow-auto">
-    <ElCard
-      shadow="never"
-      header="甘特图演示"
-      size="small"
-      content-class="overflow-y-hidden overflow-x-auto"
-      class="h-full card-wrapper"
-    >
+    <ElCard header="甘特图演示" content-class="overflow-y-hidden overflow-x-auto" class="h-full card-wrapper">
       <template #header>
         <div class="flex items-center justify-between">
           <p>甘特图演示</p>

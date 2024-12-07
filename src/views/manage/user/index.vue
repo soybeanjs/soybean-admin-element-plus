@@ -135,7 +135,7 @@ function edit(id: number) {
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <UserSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
-    <ElCard shadow="never" size="small" class="sm:flex-1-hidden card-wrapper">
+    <ElCard class="sm:flex-1-hidden card-wrapper">
       <template #header>
         <div class="flex items-center justify-between">
           <p>{{ $t('page.manage.user.title') }}</p>

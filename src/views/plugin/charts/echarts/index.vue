@@ -66,25 +66,25 @@ onUnmounted(() => {
 
 <template>
   <ElSpace fill :size="16">
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="pieRef" class="h-400px" />
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="lineRef" class="h-400px" />
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="barRef" class="h-400px" />
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="radarRef" class="h-400px"></div>
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="scatterRef" class="h-600px"></div>
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="pictorialBarRef" class="h-600px" />
     </ElCard>
-    <ElCard shadow="never" class="card-wrapper">
+    <ElCard class="card-wrapper">
       <div ref="gaugeRef" class="h-640px" />
     </ElCard>
   </ElSpace>

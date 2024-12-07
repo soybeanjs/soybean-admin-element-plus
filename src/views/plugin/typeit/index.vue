@@ -30,7 +30,7 @@ onMounted(() => {
 
 <template>
   <div>
-    <ElCard shadow="never" header="打字机 插件" :bordered="false" class="h-full card-wrapper">
+    <ElCard header="打字机 插件" class="h-full card-wrapper">
       <ElSpace direction="vertical">
         <GithubLink link="https://github.com/alexmacarthur/typeit" />
         <WebSiteLink label="文档地址：" link="https://www.typeitjs.com/docs/vanilla/usage/" />

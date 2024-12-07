@@ -26,7 +26,7 @@ onMounted(() => {
 
 <template>
   <div class="h-full">
-    <ElCard shadow="never" header="富文本插件" class="card-wrapper">
+    <ElCard header="富文本插件" class="card-wrapper">
       <div ref="domRef" class="bg-white dark:bg-dark"></div>
       <template #footer>
         <GithubLink link="https://github.com/wangeditor-team/wangEditor" />

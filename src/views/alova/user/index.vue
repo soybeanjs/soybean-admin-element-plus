@@ -142,7 +142,7 @@ const { columnChecks, columns } = useCheckedColumns<typeof fetchGetUserList>(() 
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <UserSearch v-model:model="searchParams" @search="getDataByPage" />
-    <ElCard shadow="never" :header="$t('page.manage.user.title')" class="sm:flex-1-hidden card-wrapper">
+    <ElCard :header="$t('page.manage.user.title')" class="sm:flex-1-hidden card-wrapper">
       <template #header-extra>
         <TableHeaderOperation
           v-model:columns="columnChecks"

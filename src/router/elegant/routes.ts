@@ -424,6 +424,16 @@ export const generatedRoutes: GeneratedRoute[] = [
               i18nKey: 'route.plugin_charts_echarts',
               icon: 'simple-icons:apacheecharts'
             }
+          },
+          {
+            name: 'plugin_charts_vchart',
+            path: '/plugin/charts/vchart',
+            component: 'view.plugin_charts_vchart',
+            meta: {
+              title: 'plugin_charts_vchart',
+              i18nKey: 'route.plugin_charts_vchart',
+              localIcon: 'visactor'
+            }
           }
         ]
       },

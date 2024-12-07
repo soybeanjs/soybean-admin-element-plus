@@ -32,7 +32,7 @@ onUnmounted(() => {
 
 <template>
   <div>
-    <ElCard shadow="never" header="视频播放器插件" class="h-full card-wrapper">
+    <ElCard header="视频播放器插件" class="h-full card-wrapper">
       <div class="flex-center">
         <div ref="domRef" class="h-auto w-full shadow-md"></div>
       </div>

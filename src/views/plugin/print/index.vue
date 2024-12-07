@@ -28,7 +28,7 @@ function printImage() {
 
 <template>
   <div class="h-full">
-    <ElCard shadow="never" header="打印" class="card-wrapper">
+    <ElCard header="打印" class="card-wrapper">
       <ElButton type="primary" class="mr-10px" @click="printTable">打印表格</ElButton>
       <ElButton type="primary" @click="printImage">打印图片</ElButton>
       <template #footer>

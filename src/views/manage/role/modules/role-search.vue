@@ -24,7 +24,7 @@ function search() {
 </script>
 
 <template>
-  <ElCard shadow="never" class="card-wrapper">
+  <ElCard class="card-wrapper">
     <ElCollapse :default-expanded-names="['role-search']">
       <ElCollapseItem :title="$t('common.search')" name="role-search">
         <ElForm :model="model" label-position="right" :label-width="80">

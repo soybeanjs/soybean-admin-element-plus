@@ -98,7 +98,7 @@ onMounted(() => {
 
 <template>
   <div class="overflow-hidden">
-    <ElCard shadow="never" header="条形码" class="h-full card-wrapper">
+    <ElCard header="条形码" class="h-full card-wrapper">
       <ElScrollbar class="h-full">
         <ElRow :gutter="12" class="w-[calc(100%-12px)]">
           <ElCol v-for="item in codes" :key="item.id" :lg="8" :md="12" :sm="24" class="mb-24px">

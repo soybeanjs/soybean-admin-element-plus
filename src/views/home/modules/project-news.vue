@@ -20,7 +20,7 @@ const newses = computed<NewsItem[]>(() => [
 </script>
 
 <template>
-  <ElCard shadow="never" size="small" segmented class="card-wrapper">
+  <ElCard class="card-wrapper">
     <template #header>
       <ElRow>
         <ElCol :span="18">{{ $t('page.home.projectNews.title') }}</ElCol>

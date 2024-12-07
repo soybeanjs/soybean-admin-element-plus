@@ -55,7 +55,7 @@ onMounted(() => {
 
 <template>
   <div class="h-full">
-    <ElCard header="AntV G6 Next" shadow="never" class="h-full card-wrapper">
+    <ElCard header="AntV G6 Next" class="h-full card-wrapper">
       <AntvFlow ref="antvFlowRef" :data="flowData" :selected="selectedNode" :behaviors="behaviors" />
       <ElDivider />
       <ElButton @click="selectedNode = 'N5'">选中节点N5(需要自行处理选中事件，不会触发元素点击)</ElButton>

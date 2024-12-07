@@ -141,7 +141,7 @@ init();
 </script>
 
 <template>
-  <ElCard shadow="never" class="card-wrapper">
+  <ElCard class="card-wrapper">
     <div ref="domRef" class="h-360px overflow-hidden"></div>
   </ElCard>
 </template>

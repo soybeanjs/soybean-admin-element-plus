@@ -36,22 +36,16 @@ async function handleRepeatedModalError() {
 
 <template>
   <ElSpace direction="vertical" fill :size="16">
-    <ElCard shadow="never" :header="$t('request.logout')" size="small" segmented class="card-wrapper">
+    <ElCard :header="$t('request.logout')" class="card-wrapper">
       <ElButton @click="logout">{{ $t('common.trigger') }}</ElButton>
     </ElCard>
-    <ElCard shadow="never" :header="$t('request.logoutWithModal')" size="small" segmented class="card-wrapper">
+    <ElCard :header="$t('request.logoutWithModal')" class="card-wrapper">
       <ElButton @click="logoutWithModal">{{ $t('common.trigger') }}</ElButton>
     </ElCard>
-    <ElCard shadow="never" :header="$t('request.refreshToken')" size="small" segmented class="card-wrapper">
+    <ElCard :header="$t('request.refreshToken')" class="card-wrapper">
       <ElButton @click="refreshToken">{{ $t('common.trigger') }}</ElButton>
     </ElCard>
-    <ElCard
-      shadow="never"
-      :header="$t('page.function.request.repeatedErrorOccurOnce')"
-      size="small"
-      segmented
-      class="card-wrapper"
-    >
+    <ElCard :header="$t('page.function.request.repeatedErrorOccurOnce')" class="card-wrapper">
       <ElButton @click="handleRepeatedMessageError">{{ $t('page.function.request.repeatedError') }}(Message)</ElButton>
       <ElButton class="ml-12px" @click="handleRepeatedModalError">
         {{ $t('page.function.request.repeatedError') }}(Modal)

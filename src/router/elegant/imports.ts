@@ -42,6 +42,7 @@ export const views: Record<LastLevelRouteKey, RouteComponent | (() => Promise<Ro
   plugin_barcode: () => import("@/views/plugin/barcode/index.vue"),
   plugin_charts_antv: () => import("@/views/plugin/charts/antv/index.vue"),
   plugin_charts_echarts: () => import("@/views/plugin/charts/echarts/index.vue"),
+  plugin_charts_vchart: () => import("@/views/plugin/charts/vchart/index.vue"),
   plugin_copy: () => import("@/views/plugin/copy/index.vue"),
   plugin_editor_markdown: () => import("@/views/plugin/editor/markdown/index.vue"),
   plugin_editor_quill: () => import("@/views/plugin/editor/quill/index.vue"),

@@ -33,7 +33,7 @@ const swiperExample: SwiperExample[] = [
 
 <template>
   <div>
-    <ElCard shadow="never" header="Swiper插件" class="card-wrapper">
+    <ElCard header="Swiper插件" class="card-wrapper">
       <ElSpace :vertical="true">
         <GithubLink link="https://github.com/nolimits4web/swiper" />
         <WebSiteLink label="vue3版文档地址：" link="https://swiperjs.com/vue" />

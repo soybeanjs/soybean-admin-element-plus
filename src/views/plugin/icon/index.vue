@@ -11,7 +11,7 @@ const localIcons = ['custom-icon', 'activity', 'at-sign', 'cast', 'chrome', 'cop
 
 <template>
   <div class="h-full">
-    <ElCard shadow="never" header="Icon组件示例" class="card-wrapper">
+    <ElCard header="Icon组件示例" class="card-wrapper">
       <div class="grid grid-cols-10">
         <template v-for="item in icons" :key="item">
           <div class="mt-5px flex-x-center">
@@ -27,7 +27,7 @@ const localIcons = ['custom-icon', 'activity', 'at-sign', 'cast', 'chrome', 'cop
         <WebSiteLink label="iconify地址：" link="https://icones.js.org/" class="mt-10px" />
       </template>
     </ElCard>
-    <ElCard shadow="never" header="自定义图标示例" class="mt-10px card-wrapper">
+    <ElCard header="自定义图标示例" class="mt-10px card-wrapper">
       <div class="pb-12px text-16px">
         在src/assets/svg-icon文件夹下的svg文件，通过在template里面以 icon-local-{文件名} 直接渲染,
         其中icon-local为.env文件里的 VITE_ICON_LOCAL_PREFIX

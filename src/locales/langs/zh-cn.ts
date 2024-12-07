@@ -205,6 +205,7 @@ const local: App.I18n.Schema = {
     plugin_charts: '图表',
     plugin_charts_echarts: 'ECharts',
     plugin_charts_antv: 'AntV',
+    plugin_charts_vchart: 'VChart',
     plugin_editor: '编辑器',
     plugin_editor_quill: '富文本编辑器',
     plugin_editor_markdown: 'MD 编辑器',

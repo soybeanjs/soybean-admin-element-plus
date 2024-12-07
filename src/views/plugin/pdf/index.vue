@@ -44,7 +44,7 @@ async function handleDownload() {
 
 <template>
   <div class="overflow-hidden">
-    <ElCard shadow="never" header="PDF 预览" class="h-full card-wrapper" content-class="overflow-hidden">
+    <ElCard header="PDF 预览" class="h-full card-wrapper" content-class="overflow-hidden">
       <div class="h-[calc(100%-30px)] flex-col-stretch">
         <GithubLink link="https://github.com/hrynko/vue-pdf-embed" />
         <WebSiteLink label="文档地址：" link="https://www.npmjs.com/package/vue-pdf-embed" />

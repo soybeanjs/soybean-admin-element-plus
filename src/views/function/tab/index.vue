@@ -22,13 +22,7 @@ function resetTabLabel() {
 
 <template>
   <ElSpace direction="vertical" fill :size="16">
-    <ElCard
-      shadow="never"
-      :header="$t('page.function.tab.tabOperate.title')"
-      size="small"
-      segmented
-      class="card-wrapper"
-    >
+    <ElCard :header="$t('page.function.tab.tabOperate.title')" class="card-wrapper">
       <ElDivider content-position="left">{{ $t('page.function.tab.tabOperate.addTab') }}</ElDivider>
       <ElButton @click="routerPushByKey('about')">{{ $t('page.function.tab.tabOperate.addTabDesc') }}</ElButton>
       <ElDivider content-position="left">{{ $t('page.function.tab.tabOperate.closeTab') }}</ElDivider>
@@ -50,7 +44,7 @@ function resetTabLabel() {
         </ElButton>
       </ElSpace>
     </ElCard>
-    <ElCard shadow="never" :header="$t('page.function.tab.tabTitle.title')" size="small" segmented class="card-wrapper">
+    <ElCard :header="$t('page.function.tab.tabTitle.title')" class="card-wrapper">
       <ElDivider content-position="left">{{ $t('page.function.tab.tabTitle.changeTitle') }}</ElDivider>
       <ElInput v-model="tabLabel" class="max-w-240px">
         <template #append>

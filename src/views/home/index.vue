@@ -19,12 +19,12 @@ const gap = computed(() => (appStore.isMobile ? 0 : 16));
     <CardData class="mb-16px" />
     <ElRow :gutter="gap">
       <ElCol :lg="14" :sm="24" class="mb-16px">
-        <ElCard shadow="never" class="card-wrapper">
+        <ElCard class="card-wrapper">
           <LineChart />
         </ElCard>
       </ElCol>
       <ElCol :lg="10" :sm="24" class="mb-16px">
-        <ElCard shadow="never" class="card-wrapper">
+        <ElCard class="card-wrapper">
           <PieChart />
         </ElCard>
       </ElCol>

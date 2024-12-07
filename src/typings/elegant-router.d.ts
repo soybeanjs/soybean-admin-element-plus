@@ -67,6 +67,7 @@ declare module "@elegant-router/types" {
     "plugin_charts": "/plugin/charts";
     "plugin_charts_antv": "/plugin/charts/antv";
     "plugin_charts_echarts": "/plugin/charts/echarts";
+    "plugin_charts_vchart": "/plugin/charts/vchart";
     "plugin_copy": "/plugin/copy";
     "plugin_editor": "/plugin/editor";
     "plugin_editor_markdown": "/plugin/editor/markdown";
@@ -184,6 +185,7 @@ declare module "@elegant-router/types" {
     | "plugin_barcode"
     | "plugin_charts_antv"
     | "plugin_charts_echarts"
+    | "plugin_charts_vchart"
     | "plugin_copy"
     | "plugin_editor_markdown"
     | "plugin_editor_quill"

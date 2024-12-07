@@ -21,7 +21,7 @@ const activeMap = ref(maps[0].id);
 
 <template>
   <div class="h-full">
-    <ElCard shadow="never" header="地图插件" class="h-full" content-style="overflow:hidden">
+    <ElCard header="地图插件" class="h-full" content-style="overflow:hidden">
       <ElTabs class="h-full">
         <ElTabPane
           v-for="item in maps"
