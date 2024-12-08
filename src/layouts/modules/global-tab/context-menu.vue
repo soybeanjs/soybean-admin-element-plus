@@ -125,11 +125,12 @@ function handleDropdown(optionKey: App.Global.DropdownKey) {
       <template #dropdown>
         <ElDropdownMenu>
           <ElDropdownItem
-            v-for="{ key, label, icon } in options"
+            v-for="{ key, label, icon, disabled } in options"
             :key="key"
             class="mx-4px my-1px rounded-6px"
             :icon="icon"
             :command="key"
+            :disabled="disabled"
           >
             {{ label }}
           </ElDropdownItem>
