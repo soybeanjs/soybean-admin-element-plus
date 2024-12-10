@@ -2,6 +2,7 @@
 import { computed, ref, shallowRef } from 'vue';
 import { useRouter } from 'vue-router';
 import { onKeyStroke, useDebounceFn } from '@vueuse/core';
+import type { InputInstance } from 'element-plus';
 import { useRouteStore } from '@/store/modules/route';
 import { useAppStore } from '@/store/modules/app';
 import { $t } from '@/locales';
@@ -24,12 +25,15 @@ const handleSearch = useDebounceFn(search, 300);
 
 const visible = defineModel<boolean>('show', { required: true });
 
+const searchInput = ref<InputInstance>();
+
 function search() {
   resultOptions.value = routeStore.searchMenus.filter(menu => {
     const trimKeyword = keyword.value.toLocaleLowerCase().trim();
     const title = (menu.i18nKey ? $t(menu.i18nKey) : menu.label).toLocaleLowerCase();
     return trimKeyword && title.includes(trimKeyword);
   });
+
   activePath.value = resultOptions.value[0]?.routePath ?? '';
 }
 
@@ -86,6 +90,13 @@ function registerShortcut() {
   onKeyStroke('ArrowDown', handleDown);
 }
 
+/** open dialog and set input focus */
+function setFocus() {
+  setTimeout(() => {
+    searchInput.value?.focus();
+  });
+}
+
 registerShortcut();
 </script>
 
@@ -93,20 +104,28 @@ registerShortcut();
   <ElDialog
     v-model="visible"
     :show-close="false"
+    append-to-body
     class="search-modal fixed left-0 right-0"
     :class="[isMobile ? 'size-full top-0px rounded-0' : 'w-630px top-50px']"
+    @open-auto-focus="setFocus"
     @close="handleClose"
   >
-    <ElInput v-model="keyword" clearable :placeholder="$t('common.keywordSearch')" @input="handleSearch">
+    <ElInput
+      ref="searchInput"
+      v-model="keyword"
+      clearable
+      :placeholder="$t('common.keywordSearch')"
+      @input="handleSearch"
+    >
       <template #prefix>
         <icon-uil-search class="text-15px" />
       </template>
       <template v-if="isMobile" #append>
-        <ElButton type="primary" ghost @click="handleClose">{{ $t('common.cancel') }}</ElButton>
+        <ElButton type="primary" plain @click="handleClose">{{ $t('common.cancel') }}</ElButton>
       </template>
     </ElInput>
 
-    <div class="mt-20px">
+    <div>
       <ElEmpty v-if="resultOptions.length === 0" :description="$t('common.noData')" :image-size="50" />
       <SearchResult v-else v-model:path="activePath" :options="resultOptions" @enter="handleEnter" />
     </div>
@@ -120,6 +139,9 @@ registerShortcut();
 .search-modal {
   .el-dialog__header {
     display: none;
+  }
+  .el-dialog__body {
+    padding: 10px 15px 0;
   }
   .el-dialog__footer {
     border-top-width: 1px;
