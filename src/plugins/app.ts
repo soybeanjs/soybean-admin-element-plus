@@ -1,6 +1,5 @@
 import { h } from 'vue';
 import type { App } from 'vue';
-// import { NButton } from 'naive-ui';
 import { ElButton } from 'element-plus';
 import { $t } from '@/locales';
 
@@ -11,26 +10,33 @@ export function setupAppErrorHandle(app: App) {
   };
 }
 
+// Update check interval in milliseconds
+const UPDATE_CHECK_INTERVAL = 3 * 60 * 1000;
+
 export function setupAppVersionNotification() {
   const canAutoUpdateApp = import.meta.env.VITE_AUTOMATICALLY_DETECT_UPDATE === 'Y';
 
   if (!canAutoUpdateApp) return;
 
   let isShow = false;
+  let updateInterval: ReturnType<typeof setInterval> | undefined;
 
-  document.addEventListener('visibilitychange', async () => {
-    const preConditions = [!isShow, document.visibilityState === 'visible', !import.meta.env.DEV];
+  // Check if updates should be checked
+  const shouldCheckForUpdates = [!isShow, document.visibilityState === 'visible', !import.meta.env.DEV].every(Boolean);
 
-    if (!preConditions.every(Boolean)) return;
+  const checkForUpdates = async () => {
+    if (!shouldCheckForUpdates) return;
 
     const buildTime = await getHtmlBuildTime();
 
+    // If build time hasn't changed, no update is needed
     if (buildTime === BUILD_TIME) {
       return;
     }
 
     isShow = true;
 
+    // Show update notification
     const n = window.$notification!({
       title: $t('system.updateTitle'),
       message: h('div', {}, [
@@ -58,7 +64,25 @@ export function setupAppVersionNotification() {
         ])
       ])
     });
-  });
+  };
+  const startUpdateInterval = () => {
+    if (updateInterval) {
+      clearInterval(updateInterval);
+    }
+    updateInterval = setInterval(checkForUpdates, UPDATE_CHECK_INTERVAL);
+  };
+  // If updates should be checked, set up the visibility change listener and start the update interval
+  if (shouldCheckForUpdates) {
+    // Check for updates when the document is visible
+    document.addEventListener('visibilitychange', () => {
+      if (document.visibilityState === 'visible') {
+        checkForUpdates();
+        startUpdateInterval();
+      }
+    });
+    // Start the update interval
+    startUpdateInterval();
+  }
 }
 
 async function getHtmlBuildTime() {
