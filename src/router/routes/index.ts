@@ -88,7 +88,21 @@ const customRoutes: CustomRoute[] = [
           title: 'document_naive',
           i18nKey: 'route.document_naive',
           order: 6,
-          icon: 'logos:NativeUI'
+          icon: 'logos:naiveui'
+        }
+      },
+      {
+        name: 'document_element-plus',
+        path: '/document/element-plus',
+        component: 'view.iframe-page',
+        props: {
+          url: 'https://element-plus.org/zh-CN/'
+        },
+        meta: {
+          title: 'document_element-plus',
+          i18nKey: 'route.document_element-plus',
+          order: 7,
+          icon: 'ep:element-plus'
         }
       },
       {
@@ -101,7 +115,7 @@ const customRoutes: CustomRoute[] = [
         meta: {
           title: 'document_alova',
           i18nKey: 'route.document_alova',
-          order: 7,
+          order: 8,
           localIcon: 'alova'
         }
       },
