@@ -81,6 +81,8 @@ declare module "@elegant-router/types" {
     "plugin_pinyin": "/plugin/pinyin";
     "plugin_print": "/plugin/print";
     "plugin_swiper": "/plugin/swiper";
+    "plugin_tables": "/plugin/tables";
+    "plugin_tables_vtable": "/plugin/tables/vtable";
     "plugin_typeit": "/plugin/typeit";
     "plugin_video": "/plugin/video";
     "user-center": "/user-center";
@@ -199,6 +201,7 @@ declare module "@elegant-router/types" {
     | "plugin_pinyin"
     | "plugin_print"
     | "plugin_swiper"
+    | "plugin_tables_vtable"
     | "plugin_typeit"
     | "plugin_video"
     | "user-center"

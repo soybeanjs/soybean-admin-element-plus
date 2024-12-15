@@ -560,6 +560,25 @@ export const generatedRoutes: GeneratedRoute[] = [
         }
       },
       {
+        name: 'plugin_tables',
+        path: '/plugin/tables',
+        meta: {
+          title: 'plugin_tables',
+          i18nKey: 'route.plugin_tables'
+        },
+        children: [
+          {
+            name: 'plugin_tables_vtable',
+            path: '/plugin/tables/vtable',
+            component: 'view.plugin_tables_vtable',
+            meta: {
+              title: 'plugin_tables_vtable',
+              i18nKey: 'route.plugin_tables_vtable'
+            }
+          }
+        ]
+      },
+      {
         name: 'plugin_typeit',
         path: '/plugin/typeit',
         component: 'view.plugin_typeit',

@@ -53,6 +53,9 @@ importers:
       '@visactor/vtable-gantt':
         specifier: 1.10.5
         version: 1.10.5
+      '@visactor/vue-vtable':
+        specifier: 1.10.5
+        version: 1.10.5
       '@vueuse/components':
         specifier: 11.2.0
         version: 11.2.0(vue@3.5.13)
@@ -3549,6 +3552,13 @@ packages:
       '@visactor/vutils': 0.18.18
       '@visactor/vutils-extension': 1.11.14
       cssfontparser: 1.2.1
+    dev: false
+
+  /@visactor/vue-vtable@1.10.5:
+    resolution: {integrity: sha512-e71e8U9+or3wWuS6yjkkP8V55rutiOnfQRtj0uWJF1zihc1T9xb8Ba30pQ3co1vXOah86/1HpyzWlQ/2Gq3+DA==}
+    dependencies:
+      '@visactor/vtable': 1.10.5
+      '@visactor/vutils': 0.18.18
     dev: false
 
   /@visactor/vutils-extension@1.11.14:
