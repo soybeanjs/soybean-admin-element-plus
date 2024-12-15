@@ -27,13 +27,11 @@ async function handleCopy() {
 <template>
   <div class="h-full">
     <ElCard header="文本复制" class="h-full card-wrapper">
-      <ElInputGroup>
-        <ElInput v-model="source" placeholder="请输入要复制的内容吧">
-          <template #append>
-            <ElButton type="primary" @click="handleCopy">复制</ElButton>
-          </template>
-        </ElInput>
-      </ElInputGroup>
+      <ElInput v-model="source" placeholder="请输入要复制的内容吧">
+        <template #append>
+          <ElButton type="primary" @click="handleCopy">复制</ElButton>
+        </template>
+      </ElInput>
     </ElCard>
   </div>
 </template>
