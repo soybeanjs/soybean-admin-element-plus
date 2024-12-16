@@ -564,7 +564,8 @@ export const generatedRoutes: GeneratedRoute[] = [
         path: '/plugin/tables',
         meta: {
           title: 'plugin_tables',
-          i18nKey: 'route.plugin_tables'
+          i18nKey: 'route.plugin_tables',
+          icon: 'icon-park-outline:table'
         },
         children: [
           {
@@ -573,7 +574,8 @@ export const generatedRoutes: GeneratedRoute[] = [
             component: 'view.plugin_tables_vtable',
             meta: {
               title: 'plugin_tables_vtable',
-              i18nKey: 'route.plugin_tables_vtable'
+              i18nKey: 'route.plugin_tables_vtable',
+              localIcon: 'visactor'
             }
           }
         ]
