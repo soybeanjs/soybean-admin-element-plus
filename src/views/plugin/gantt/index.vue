@@ -141,10 +141,10 @@ function initGantt() {
   gantt.ext.zoom.setLevel(timeType.value);
 }
 
-// function changeTime(value: string | number) {
-//   timeType.value = value as TimeType;
-//   gantt.ext.zoom.setLevel(value);
-// }
+function changeTime(value: string | number) {
+  timeType.value = value as TimeType;
+  gantt.ext.zoom.setLevel(value);
+}
 
 onMounted(() => {
   initGantt();
@@ -157,7 +157,7 @@ onMounted(() => {
       <template #header>
         <div class="flex items-center justify-between">
           <p>甘特图演示</p>
-          <ElSegmented v-model="timeType" :options="data" />
+          <ElSegmented v-model="timeType" :options="data" @change="changeTime" />
         </div>
       </template>
 
