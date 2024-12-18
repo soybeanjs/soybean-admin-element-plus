@@ -168,7 +168,7 @@ const { columnChecks, columns } = useCheckedColumns<typeof fetchGetUserList>(() 
         <div class="mt-20px flex justify-end">
           <ElPagination
             v-if="total"
-            layout="sizes,prev,pager,next"
+            layout="total,prev,pager,next,sizes"
             :current-page="page"
             :total="total"
             :page-size="pageSize"

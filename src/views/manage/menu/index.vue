@@ -218,7 +218,7 @@ init();
         <div class="mt-20px flex justify-end">
           <ElPagination
             v-if="pagination.total"
-            layout="sizes,prev,pager,next"
+            layout="total,prev,pager,next,sizes"
             v-bind="pagination"
             @current-change="pagination['current-change']"
             @size-change="pagination['size-change']"
