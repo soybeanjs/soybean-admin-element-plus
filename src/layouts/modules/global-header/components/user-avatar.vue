@@ -68,7 +68,7 @@ function handleDropdown(key: DropdownKey) {
     {{ $t('page.login.common.loginOrRegister') }}
   </ElButton>
 
-  <ElDropdown trigger="click" @command="handleDropdown">
+  <ElDropdown class="px-14px" trigger="click" @command="handleDropdown">
     <template #dropdown>
       <ElDropdownMenu>
         <ElDropdownItem
