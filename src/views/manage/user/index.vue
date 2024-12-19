@@ -133,7 +133,7 @@ function edit(id: number) {
 </script>
 
 <template>
-  <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
+  <div class="min-h-500px flex-col-stretch flex-shrink-0 gap-16px overflow-hidden lt-sm:overflow-auto">
     <UserSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
     <ElCard class="sm:flex-1-hidden card-wrapper">
       <template #header>
