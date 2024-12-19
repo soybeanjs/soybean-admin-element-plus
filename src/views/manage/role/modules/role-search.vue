@@ -1,9 +1,12 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { $t } from '@/locales';
 import { enableStatusOptions } from '@/constants/business';
 import { translateOptions } from '@/utils/common';
 
 defineOptions({ name: 'RoleSearch' });
+
+const activeName = ref(['role-search']);
 
 interface Emits {
   (e: 'reset'): void;
@@ -25,7 +28,7 @@ function search() {
 
 <template>
   <ElCard class="card-wrapper">
-    <ElCollapse :default-expanded-names="['role-search']">
+    <ElCollapse v-model="activeName">
       <ElCollapseItem :title="$t('common.search')" name="role-search">
         <ElForm :model="model" label-position="right" :label-width="80">
           <ElRow :gutter="24">
