@@ -189,7 +189,7 @@ init();
 
 <template>
   <div ref="wrapperRef" class="flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
-    <ElCard class="sm:flex-1-hidden card-wrapper">
+    <ElCard class="sm:flex-1-hidden card-wrapper" body-class="ht50">
       <template #header>
         <div class="flex items-center justify-between">
           <p>{{ $t('page.manage.menu.title') }}</p>
@@ -203,7 +203,7 @@ init();
           />
         </div>
       </template>
-      <div class="h-[calc(100%-48px)]">
+      <div class="h-[calc(100%-50px)]">
         <ElTable
           v-loading="loading"
           height="100%"
@@ -236,4 +236,10 @@ init();
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+:deep(.el-card) {
+  .ht50 {
+    height: calc(100% - 50px);
+  }
+}
+</style>

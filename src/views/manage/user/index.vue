@@ -133,9 +133,9 @@ function edit(id: number) {
 </script>
 
 <template>
-  <div class="min-h-500px flex-col-stretch flex-shrink-0 gap-16px overflow-hidden lt-sm:overflow-auto">
+  <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <UserSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
-    <ElCard class="sm:flex-1-hidden card-wrapper">
+    <ElCard class="sm:flex-1-hidden card-wrapper" body-class="ht50">
       <template #header>
         <div class="flex items-center justify-between">
           <p>{{ $t('page.manage.user.title') }}</p>
@@ -149,7 +149,7 @@ function edit(id: number) {
           />
         </div>
       </template>
-      <div class="h-[calc(100%-48px)]">
+      <div class="h-[calc(100%-50px)]">
         <ElTable
           v-loading="loading"
           height="100%"
@@ -161,15 +161,15 @@ function edit(id: number) {
         >
           <ElTableColumn v-for="col in columns" :key="col.prop" v-bind="col" />
         </ElTable>
-        <div class="mt-20px flex justify-end">
-          <ElPagination
-            v-if="mobilePagination.total"
-            layout="total,prev,pager,next,sizes"
-            v-bind="mobilePagination"
-            @current-change="mobilePagination['current-change']"
-            @size-change="mobilePagination['size-change']"
-          />
-        </div>
+      </div>
+      <div class="mt-20px flex justify-end">
+        <ElPagination
+          v-if="mobilePagination.total"
+          layout="total,prev,pager,next,sizes"
+          v-bind="mobilePagination"
+          @current-change="mobilePagination['current-change']"
+          @size-change="mobilePagination['size-change']"
+        />
       </div>
       <UserOperateDrawer
         v-model:visible="drawerVisible"
@@ -181,4 +181,10 @@ function edit(id: number) {
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+:deep(.el-card) {
+  .ht50 {
+    height: calc(100% - 50px);
+  }
+}
+</style>

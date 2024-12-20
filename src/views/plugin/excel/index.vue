@@ -150,7 +150,7 @@ function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): column is UI.Table
         </div>
       </template>
       <template #header-extra></template>
-      <div class="h-[calc(100%-40px)]">
+      <div class="h-[calc(100%-50px)]">
         <ElTable v-loading="loading" height="100%" border class="sm:h-full" :data="data" row-key="id">
           <ElTableColumn v-for="col in columns" :key="col.prop" v-bind="col" />
         </ElTable>

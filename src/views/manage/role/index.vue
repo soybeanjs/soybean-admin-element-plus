@@ -109,7 +109,7 @@ function edit(id: number) {
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <RoleSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
-    <ElCard :header="$t('page.manage.role.title')" class="sm:flex-1-hidden card-wrapper">
+    <ElCard :header="$t('page.manage.role.title')" class="sm:flex-1-hidden card-wrapper" body-class="ht50">
       <template #header-extra>
         <TableHeaderOperation
           v-model:columns="columnChecks"
@@ -120,7 +120,7 @@ function edit(id: number) {
           @refresh="getData"
         />
       </template>
-      <div class="h-[calc(100%-48px)]">
+      <div class="h-[calc(100%-50px)]">
         <ElTable
           v-loading="loading"
           height="100%"
@@ -152,4 +152,10 @@ function edit(id: number) {
   </div>
 </template>
 
-<style scoped></style>
+<style lang="scss" scoped>
+:deep(.el-card) {
+  .ht50 {
+    height: calc(100% - 50px);
+  }
+}
+</style>
