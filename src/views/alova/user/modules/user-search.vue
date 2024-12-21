@@ -43,7 +43,7 @@ async function search() {
 
 <template>
   <ElCard class="card-wrapper">
-    <ElCollapse :default-expanded-names="['user-search']">
+    <ElCollapse>
       <ElCollapseItem :title="$t('common.search')" name="user-search">
         <ElForm ref="formRef" :model="model" :rules="rules" label-position="right" :label-width="80">
           <ElRow :gutter="24">
