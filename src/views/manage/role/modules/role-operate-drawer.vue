@@ -114,9 +114,9 @@ watch(visible, () => {
     </ElForm>
     <ElSpace v-if="isEdit">
       <ElButton @click="openMenuAuthModal">{{ $t('page.manage.role.menuAuth') }}</ElButton>
-      <MenuAuthModal v-model="menuAuthVisible" :role-id="roleId" />
+      <MenuAuthModal v-model:visible="menuAuthVisible" :role-id="roleId" />
       <ElButton @click="openButtonAuthModal">{{ $t('page.manage.role.buttonAuth') }}</ElButton>
-      <ButtonAuthModal v-model="buttonAuthVisible" :role-id="roleId" />
+      <ButtonAuthModal v-model:visible="buttonAuthVisible" :role-id="roleId" />
     </ElSpace>
     <template #footer>
       <ElSpace :size="16">
