@@ -170,6 +170,8 @@ export const useRouteStore = defineStore(SetupStoreId.Route, () => {
     handleConstantAndAuthRoutes();
 
     setIsInitConstantRoute(true);
+
+    tabStore.initHomeTab();
   }
 
   /** Init auth route */
@@ -316,7 +318,7 @@ export const useRouteStore = defineStore(SetupStoreId.Route, () => {
   }
 
   async function onRouteSwitchWhenLoggedIn() {
-    authStore.initUserInfo();
+    await authStore.initUserInfo();
   }
 
   async function onRouteSwitchWhenNotLoggedIn() {
