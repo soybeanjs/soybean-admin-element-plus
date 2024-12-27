@@ -1,60 +1,23 @@
 {
-  "cSpell.words": [
-    "Antd",
-    "antv",
-    "clsx",
-    "colord",
-    "consola",
-    "EDITMSG",
-    "espree",
-    "execa",
-    "heroicons",
-    "hexcode",
-    "iconify",
-    "INDEXEDDB",
-    "jiti",
-    "kolorist",
-    "Laba",
-    "localforage",
-    "LOCALSTORAGE",
-    "nocheck",
-    "nprogress",
-    "ofetch",
-    "preflights",
-    "sider",
-    "tada",
-    "Uncapitalize",
-    "unocss",
-    "unplugin",
-    "VITE",
-    "vitepress",
-    "vueuse",
-    "WEBSQL",
-    "wechat"
-  ],
-  "editor.codeActionsOnSave": {
-    "source.fixAll.eslint": "explicit"
-  },
-  "editor.fontLigatures": true,
-  "editor.formatOnSave": false,
+  "editor.tabSize": 2,
   "editor.quickSuggestions": {
     "strings": true
   },
-  "editor.tabSize": 2,
-  "files.associations": {
-    "*.env.*": "dotenv",
-    "*.svg": "html"
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit",
+    "source.organizeImports": "never"
   },
-  "files.eol": "\n",
-  "i18n-ally.displayLanguage": "zh-CN",
+  "eslint.useFlatConfig": true,
+  "editor.formatOnSave": false,
+  "eslint.validate": ["html", "css", "scss", "json", "jsonc"],
+  "i18n-ally.displayLanguage": "zh-cn",
   "i18n-ally.enabledParsers": ["ts"],
   "i18n-ally.enabledFrameworks": ["vue"],
   "i18n-ally.editor.preferEditor": true,
   "i18n-ally.keystyle": "nested",
-  "i18n-ally.localesPaths": ["src/locales/lang"],
+  "i18n-ally.localesPaths": ["src/locales/langs"],
+  "prettier.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib",
   "unocss.root": ["./"],
-  "[html][css][less][scss][sass][markdown][yaml][yml][json][jsonc]": {
-    "editor.defaultFormatter": "esbenp.prettier-vscode",
-    "editor.formatOnSave": true
-  }
+  "vue.server.hybridMode": true
 }
