@@ -30,8 +30,9 @@ function handleSelectMixMenu(menu: App.Global.Menu) {
 <template>
   <Teleport :to="`#${GLOBAL_HEADER_MENU_ID}`">
     <ElMenu
+      ellipsis
+      class="w-full"
       mode="horizontal"
-      :ellipsis="false"
       :default-active="selectedKey"
       @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
     >

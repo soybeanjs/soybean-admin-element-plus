@@ -16,6 +16,8 @@ const { selectedKey } = useMenu();
 <template>
   <Teleport :to="`#${GLOBAL_HEADER_MENU_ID}`">
     <ElMenu
+      ellipsis
+      class="w-full"
       mode="horizontal"
       :default-active="selectedKey"
       @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
