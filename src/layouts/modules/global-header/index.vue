@@ -9,9 +9,7 @@ import GlobalSearch from '../global-search/index.vue';
 import ThemeButton from './components/theme-button.vue';
 import UserAvatar from './components/user-avatar.vue';
 
-defineOptions({
-  name: 'GlobalHeader'
-});
+defineOptions({ name: 'GlobalHeader' });
 
 interface Props {
   /** Whether to show the logo */
@@ -39,7 +37,9 @@ const { isFullscreen, toggle } = useFullscreen();
     </div>
     <div class="h-full flex-y-center justify-end">
       <GlobalSearch />
-      <FullScreen v-if="!appStore.isMobile" :full="isFullscreen" @click="toggle" />
+      <div>
+        <FullScreen v-if="!appStore.isMobile" :full="isFullscreen" @click="toggle" />
+      </div>
       <LangSwitch :lang="appStore.locale" :lang-options="appStore.localeOptions" @change-lang="appStore.changeLocale" />
       <ThemeSchemaSwitch
         :theme-schema="themeStore.themeScheme"
