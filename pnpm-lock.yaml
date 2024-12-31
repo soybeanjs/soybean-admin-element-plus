@@ -68,6 +68,9 @@ importers:
       dayjs:
         specifier: 1.11.13
         version: 1.11.13
+      defu:
+        specifier: ^6.1.4
+        version: 6.1.4
       dhtmlx-gantt:
         specifier: 9.0.2
         version: 9.0.2
@@ -5417,7 +5420,6 @@ packages:
 
   /defu@6.1.4:
     resolution: {integrity: sha512-mEQCMmwJu317oSz8CwdIOdwf3xMif1ttiM8LTufzc3g6kR+9Pe236twL8j3IYT1F7GfRgGcW6MWxzZjLIkuHIg==}
-    dev: true
 
   /delayed-stream@1.0.0:
     resolution: {integrity: sha512-ZySD7Nf91aLB0RxL4KGrKHBXl7Eds1DAmEdcoVawXnLD7SDhpNgtuII2aAkg7a7QS41jxPSZ17p4VdGnMHk3MQ==}

@@ -1,3 +1,4 @@
+import { defu } from 'defu';
 import { addColorAlpha, getColorPalette, getPaletteColorByNumber, getRgb } from '@sa/color';
 import { overrideThemeSettings, themeSettings } from '@/theme/settings';
 import { themeVars } from '@/theme/vars';
@@ -16,12 +17,14 @@ export function initThemeSettings() {
   // if it is production mode, the theme settings will be cached in localStorage
   // if want to update theme settings when publish new version, please update `overrideThemeSettings` in `src/theme/settings.ts`
 
-  const settings = localStg.get('themeSettings') || themeSettings;
+  const localSettings = localStg.get('themeSettings');
+
+  let settings = defu(localSettings, themeSettings);
 
   const isOverride = localStg.get('overrideThemeFlag') === BUILD_TIME;
 
   if (!isOverride) {
-    Object.assign(settings, overrideThemeSettings);
+    settings = defu(overrideThemeSettings, settings);
     localStg.set('overrideThemeFlag', BUILD_TIME);
   }
 
