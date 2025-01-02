@@ -133,6 +133,9 @@ const isWrapperScrollMode = computed(() => themeStore.layout.scrollMode === 'wra
         placeholder="SoybeanAdmin"
       />
     </SettingItem>
+    <SettingItem key="9" :label="$t('theme.header.multilingual.visible')">
+      <ElSwitch v-model="themeStore.header.multilingual.visible" />
+    </SettingItem>
   </TransitionGroup>
 </template>
 
