@@ -1,7 +1,7 @@
 <script lang="ts" setup>
 import printJS from 'print-js';
 
-defineOptions({ name: 'Print' });
+defineOptions({ name: 'PrintPage' });
 
 function printTable() {
   printJS({

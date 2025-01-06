@@ -5,7 +5,7 @@ import type { GanttConfigOptions, ZoomLevel } from 'dhtmlx-gantt';
 import 'dhtmlx-gantt/codebase/dhtmlxgantt.css';
 import { ganttTasks } from './data';
 
-defineOptions({ name: 'Gantt' });
+defineOptions({ name: 'GanttPage' });
 
 const ganttRef = shallowRef<HTMLElement>();
 

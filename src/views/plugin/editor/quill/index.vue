@@ -2,7 +2,7 @@
 import { onMounted, ref } from 'vue';
 import WangEditor from 'wangeditor';
 
-defineOptions({ name: 'Quill' });
+defineOptions({ name: 'QuillPage' });
 
 const editor = ref<WangEditor>();
 const domRef = ref<HTMLElement>();

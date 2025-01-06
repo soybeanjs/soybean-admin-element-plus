@@ -6,7 +6,7 @@ import { fetchGetUserList } from '@/service/api';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { $t } from '@/locales';
 
-defineOptions({ name: 'Excel' });
+defineOptions({ name: 'ExcelPage' });
 
 const { columns, data, loading } = useTable({
   apiFn: fetchGetUserList,

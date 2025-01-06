@@ -3,7 +3,7 @@ import JsBarcode from 'jsbarcode';
 import type { Options } from 'jsbarcode';
 import { onMounted } from 'vue';
 
-defineOptions({ name: 'Barcode' });
+defineOptions({ name: 'BarcodePage' });
 
 const text = 'Soybean';
 

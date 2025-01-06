@@ -4,7 +4,7 @@ import { $t } from '@/locales';
 import { useAppStore } from '@/store/modules/app';
 import pkg from '~/package.json';
 
-defineOptions({ name: 'About' });
+defineOptions({ name: 'AboutPage' });
 
 const appStore = useAppStore();
 

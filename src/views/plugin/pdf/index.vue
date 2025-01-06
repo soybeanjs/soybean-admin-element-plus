@@ -3,7 +3,7 @@ import { ref, shallowRef } from 'vue';
 import VuePdfEmbed from 'vue-pdf-embed';
 import { useLoading } from '@sa/hooks';
 
-defineOptions({ name: 'Pdf' });
+defineOptions({ name: 'PdfPage' });
 
 const { loading, endLoading } = useLoading(true);
 

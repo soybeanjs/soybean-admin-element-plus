@@ -1,6 +1,5 @@
 declare namespace UI {
   type ThemeColor = 'danger' | 'primary' | 'info' | 'success' | 'warning';
-  type Align = 'stretch' | 'baseline' | 'start' | 'end' | 'center' | 'flex-end' | 'flex-start';
 
   type TableColumnCheck = import('@sa/hooks').TableColumnCheck;
   type TableDataWithIndex<T> = import('@sa/hooks').TableDataWithIndex<T>;

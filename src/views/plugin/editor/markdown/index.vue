@@ -4,7 +4,7 @@ import Vditor from 'vditor';
 import 'vditor/dist/index.css';
 import { useThemeStore } from '@/store/modules/theme';
 
-defineOptions({ name: 'Markdown' });
+defineOptions({ name: 'MarkdownPage' });
 
 const theme = useThemeStore();
 

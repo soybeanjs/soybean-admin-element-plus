@@ -12,7 +12,7 @@ import Register from './modules/register.vue';
 import ResetPwd from './modules/reset-pwd.vue';
 import BindWechat from './modules/bind-wechat.vue';
 
-defineOptions({ name: 'Login' });
+defineOptions({ name: 'LoginPage' });
 
 interface Props {
   /** The login module */

@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { useClipboard } from '@vueuse/core';
 
-defineOptions({ name: 'Copy' });
+defineOptions({ name: 'CopyPage' });
 
 const { copy, isSupported } = useClipboard();
 

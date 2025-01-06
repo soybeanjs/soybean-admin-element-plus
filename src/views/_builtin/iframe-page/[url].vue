@@ -8,11 +8,11 @@ interface Props {
 defineProps<Props>();
 
 onMounted(() => {
-  console.log('mounted');
+  // console.log('mounted');
 });
 
 onActivated(() => {
-  console.log('activated');
+  // console.log('activated');
 });
 </script>
 

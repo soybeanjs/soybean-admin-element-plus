@@ -4,7 +4,6 @@ import { $t } from '@/locales';
 defineOptions({ name: 'TableHeaderOperation' });
 
 interface Props {
-  itemAlign?: UI.Align;
   disabledDelete?: boolean;
   loading?: boolean;
 }

@@ -2,7 +2,7 @@
 import { ref } from 'vue';
 import { icons } from './icons';
 
-defineOptions({ name: 'Icon' });
+defineOptions({ name: 'IconPage' });
 
 const selectValue = ref('');
 

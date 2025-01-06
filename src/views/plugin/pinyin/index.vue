@@ -3,7 +3,7 @@ import { onMounted, ref } from 'vue';
 import { html } from 'pinyin-pro';
 import domPurify from 'dompurify';
 
-defineOptions({ name: 'Pinyin' });
+defineOptions({ name: 'PinyinPage' });
 
 const domRef = ref<HTMLElement | null>(null);
 const domRef2 = ref<HTMLElement | null>(null);
