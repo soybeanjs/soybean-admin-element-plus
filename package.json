@@ -39,6 +39,7 @@
     "dev:prod": "vite --mode prod",
     "gen-route": "sa gen-route",
     "lint": "eslint . --fix",
+    "postbuild": "sa print-soybean",
     "prepare": "simple-git-hooks",
     "preview": "vite preview",
     "release": "sa release",

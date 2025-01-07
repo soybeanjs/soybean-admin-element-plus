@@ -1,11 +1,28 @@
 import cac from 'cac';
 import { blue, lightGreen } from 'kolorist';
 import { version } from '../package.json';
-import { cleanup, genChangelog, generateRoute, gitCommit, gitCommitVerify, release, updatePkg } from './commands';
+import {
+  cleanup,
+  genChangelog,
+  generateRoute,
+  gitCommit,
+  gitCommitVerify,
+  printSoybean,
+  release,
+  updatePkg
+} from './commands';
 import { loadCliOptions } from './config';
 import type { Lang } from './locales';
 
-type Command = 'cleanup' | 'update-pkg' | 'git-commit' | 'git-commit-verify' | 'changelog' | 'release' | 'gen-route';
+type Command =
+  | 'cleanup'
+  | 'update-pkg'
+  | 'git-commit'
+  | 'git-commit-verify'
+  | 'changelog'
+  | 'release'
+  | 'gen-route'
+  | 'print-soybean';
 
 type CommandAction<A extends object> = (args?: A) => Promise<void> | void;
 
@@ -95,6 +112,12 @@ export async function setupCli() {
       desc: 'generate route',
       action: async () => {
         await generateRoute();
+      }
+    },
+    'print-soybean': {
+      desc: 'print soybean',
+      action: async () => {
+        await printSoybean();
       }
     }
   };
