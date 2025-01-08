@@ -31,7 +31,11 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
       dts: 'src/typings/components.d.ts',
       types: [{ from: 'vue-router', names: ['RouterLink', 'RouterView'] }],
       resolvers: [
-        ElementPlusResolver(), // auto import Element Plus components。 full import to see /src/plugins/ui.ts
+        // auto import Element Plus components。 full import to see /src/plugins/ui.ts
+        ElementPlusResolver({
+          // no to import style, full import to see /src/plugins/assets.ts
+          importStyle: false
+        }),
         IconsResolver({ customCollections: [collectionName], componentPrefix: VITE_ICON_PREFIX })
       ]
     }),
