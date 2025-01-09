@@ -1,2 +1,2 @@
-@import './scrollbar.scss';
-@import './element-plus.scss';
+@forward 'element-plus';
+@forward 'scrollbar';

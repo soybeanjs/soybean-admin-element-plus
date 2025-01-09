@@ -113,7 +113,7 @@
     "eslint": "9.14.0",
     "eslint-plugin-vue": "9.31.0",
     "lint-staged": "15.2.10",
-    "sass": "1.79.4",
+    "sass": "1.83.0",
     "simple-git-hooks": "2.11.1",
     "tsx": "4.19.2",
     "typescript": "5.6.3",
