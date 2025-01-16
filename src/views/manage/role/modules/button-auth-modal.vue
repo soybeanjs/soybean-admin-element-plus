@@ -48,6 +48,7 @@ async function getAllButtons() {
 const checks = shallowRef<number[]>([]);
 
 async function getChecks() {
+  // eslint-disable-next-line no-console
   console.log(props.roleId);
   // request
   checks.value = [1, 2, 3, 4, 5];
@@ -63,6 +64,7 @@ function checkChange(val: ButtonConfig) {
 }
 
 function handleSubmit() {
+  // eslint-disable-next-line no-console
   console.log(checks.value, props.roleId);
   // request
 

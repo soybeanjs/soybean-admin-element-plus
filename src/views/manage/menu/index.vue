@@ -148,8 +148,9 @@ async function handleBatchDelete() {
 }
 
 function handleDelete(id: number) {
-  // request
+  // eslint-disable-next-line no-console
   console.log(id);
+  // request
 
   onDeleted();
 }

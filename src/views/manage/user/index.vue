@@ -114,15 +114,17 @@ const {
 } = useTableOperate(data, getData);
 
 async function handleBatchDelete() {
-  // request
+  // eslint-disable-next-line no-console
   console.log(checkedRowKeys.value);
+  // request
 
   onBatchDeleted();
 }
 
 function handleDelete(id: number) {
-  // request
+  // eslint-disable-next-line no-console
   console.log(id);
+  // request
 
   onDeleted();
 }
