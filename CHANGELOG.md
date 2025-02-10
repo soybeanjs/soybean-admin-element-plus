@@ -1,6 +1,41 @@
 # Changelog
 
 
+## [v1.3.11](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.10...v1.3.11) (2025-02-10)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **projects**: ✨  multi language buttons support hiding &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/44 [<samp>(312c0)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/312c0e2)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **projects**:
+  - 🐛  fix login success notification. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/45 [<samp>(c94c8)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c94c845)
+  - 🐛  fix element-plus style conflicts &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/49 [<samp>(b8b7f)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/b8b7f4d)
+  - 🐛  fix update notifications &nbsp;-&nbsp; by **skyfeiz** [<samp>(ecbf1)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/ecbf1d1)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **projects**: 🎨  fix warning Component name should always be multi-word &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/46 [<samp>(aceff)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/aceff34)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: ⬆️  update sass &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/50 [<samp>(223bb)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/223bb5e)
+- **other**: 🥚 add postbuild print &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/47 [<samp>(571f1)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/571f14d)
+
+### &nbsp;&nbsp;&nbsp;🎨 Styles
+
+- **projects**: 🎨  fix eslint warning &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/51 [<samp>(e25ce)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/e25ce95)
+
+### &nbsp;&nbsp;&nbsp;🤖 CI
+
+- **other**: ✨  display the actual request url in terminal &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/52 [<samp>(313f1)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/313f150)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+
+[skyfeiz](mailto:webzhangfei@163.com),&nbsp;[一寸灰](mailto:webyicunhui@outlook.com)
+
 ## [v1.3.10](https://github.com/skyfeiz/soybean-admin-elp/compare/undefined...v1.3.10) (2024-12-31)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
