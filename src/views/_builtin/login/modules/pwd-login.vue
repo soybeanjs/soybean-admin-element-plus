@@ -110,6 +110,7 @@ async function handleAccountLogin(account: Account) {
           :key="item.key"
           size="default"
           type="primary"
+          :disabled="authStore.loginLoading"
           @click="handleAccountLogin(item)"
         >
           {{ item.label }}
