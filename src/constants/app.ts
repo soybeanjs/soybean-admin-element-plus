@@ -60,3 +60,5 @@ export const resetCacheStrategyRecord: Record<UnionKey.ResetCacheStrategy, App.I
   refresh: 'theme.resetCacheStrategy.refresh'
 };
 export const resetCacheStrategyOptions = transformRecordToOption(resetCacheStrategyRecord);
+
+export const DARK_CLASS = 'dark';
