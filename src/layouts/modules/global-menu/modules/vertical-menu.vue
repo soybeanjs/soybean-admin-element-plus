@@ -45,6 +45,7 @@ watch(
       <ElMenu
         mode="vertical"
         :default-active="selectedKey"
+        :default-openeds="expandedKeys"
         :collapse="appStore.siderCollapse"
         @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
       >
