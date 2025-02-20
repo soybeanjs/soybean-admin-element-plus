@@ -10,8 +10,8 @@ defineOptions({ name: 'LayoutMode' });
 const appStore = useAppStore();
 const themeStore = useThemeStore();
 
-function handleReverseHorizontalMixChange(value: boolean) {
-  themeStore.setLayoutReverseHorizontalMix(value);
+function handleReverseHorizontalMixChange(value: boolean | string | number) {
+  themeStore.setLayoutReverseHorizontalMix(value as boolean);
 }
 </script>
 
@@ -52,7 +52,7 @@ function handleReverseHorizontalMixChange(value: boolean) {
     :label="$t('theme.layoutMode.reverseHorizontalMix')"
     class="mt-16px"
   >
-    <ElSwitch :value="themeStore.layout.reverseHorizontalMix" @update:value="handleReverseHorizontalMixChange" />
+    <ElSwitch v-model="themeStore.layout.reverseHorizontalMix" @change="handleReverseHorizontalMixChange" />
   </SettingItem>
 </template>
 
