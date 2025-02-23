@@ -30,7 +30,7 @@ const watermarkProps = computed<WatermarkProps>(() => {
 <template>
   <ElConfigProvider :locale="locale">
     <AppProvider>
-      <ElWatermark v-bind="watermarkProps">
+      <ElWatermark class="h-full" v-bind="watermarkProps">
         <RouterView class="bg-layout" />
       </ElWatermark>
     </AppProvider>
