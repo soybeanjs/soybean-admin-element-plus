@@ -16,7 +16,7 @@ const locale = computed(() => {
 
 const watermarkProps = computed<WatermarkProps>(() => {
   return {
-    content: themeStore.watermark.text || 'SoybeanAdmin',
+    content: themeStore.watermark.visible ? themeStore.watermark.text || 'SoybeanAdmin' : '',
     cross: true,
     fontSize: 16,
     lineHeight: 16,
@@ -30,10 +30,9 @@ const watermarkProps = computed<WatermarkProps>(() => {
 <template>
   <ElConfigProvider :locale="locale">
     <AppProvider>
-      <ElWatermark v-if="themeStore.watermark.visible" v-bind="watermarkProps">
+      <ElWatermark v-bind="watermarkProps">
         <RouterView class="bg-layout" />
       </ElWatermark>
-      <RouterView v-else class="bg-layout" />
     </AppProvider>
   </ElConfigProvider>
 </template>
