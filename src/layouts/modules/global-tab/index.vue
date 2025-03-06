@@ -112,7 +112,7 @@ function setDropdown(config: Partial<DropdownConfig>) {
 
 let isClickContextMenu = false;
 
-function handleDropdownVisible(visible: boolean) {
+function handleDropdownVisible(visible: boolean | undefined) {
   if (!isClickContextMenu) {
     setDropdown({ visible });
   }
