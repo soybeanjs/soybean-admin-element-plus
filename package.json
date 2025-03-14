@@ -97,7 +97,7 @@
     "@iconify/json": "2.2.314",
     "@sa/scripts": "workspace:*",
     "@sa/uno-preset": "workspace:*",
-    "@soybeanjs/eslint-config": "1.5.3",
+    "@soybeanjs/eslint-config": "1.6.0",
     "@types/bmapgl": "0.0.7",
     "@types/dompurify": "3.2.0",
     "@types/node": "22.13.9",
