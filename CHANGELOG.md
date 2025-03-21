@@ -1,6 +1,42 @@
 # Changelog
 
 
+## [v1.3.12](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.11...v1.3.12) (2025-03-21)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **projects**: ✨  support loading page dark mode adaptation &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/56 [<samp>(62282)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/622820f)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **deps**:
+  - 🐛  fix lint error. [#63] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/63 [<samp>(77741)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/77741e3)
+- **projects**:
+  - 🐛  fix update notifications &nbsp;-&nbsp; by **skyfeiz** [<samp>(ecbf1)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/ecbf1d1)
+  - 🐛  add Menu default-openeds. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/58 [<samp>(3831e)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/3831e0f)
+  - 🐛  fix can`t click reverse menus button。[#59] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/60 and https://github.com/skyfeiz/soybean-admin-element-plus/issues/59 [<samp>(2ab97)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/2ab9737)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **projects**: ♻️  sync code: support proxy log in terminal &nbsp;-&nbsp; by **skyfeiz** [<samp>(1d890)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/1d89061)
+
+### &nbsp;&nbsp;&nbsp;📖 Documentation
+
+- **projects**: update README. &nbsp;-&nbsp; by @Azir-11 [<samp>(3f127)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/3f127be)
+
+### &nbsp;&nbsp;&nbsp;📦 Build
+
+- **deps**: 📦️  Restrict the minimum Node.js version. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/66 [<samp>(223b5)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/223b5d1)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **projects**: ⬆️  update deps &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/62 [<samp>(57380)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/57380e1)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![Azir-11](https://github.com/Azir-11.png?size=48)](https://github.com/Azir-11)&nbsp;&nbsp;
+[skyfeiz](mailto:webzhangfei@163.com),&nbsp;[一寸灰](mailto:webyicunhui@outlook.com),&nbsp;
+
 ## [v1.3.11](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.10...v1.3.11) (2025-02-10)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
