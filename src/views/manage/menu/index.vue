@@ -1,13 +1,13 @@
 <script setup lang="tsx">
 import { ref } from 'vue';
 import type { Ref } from 'vue';
-import { useBoolean } from '@sa/hooks';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
+import { useBoolean } from '@sa/hooks';
+import { yesOrNoRecord } from '@/constants/common';
+import { enableStatusRecord, menuTypeRecord } from '@/constants/business';
 import { fetchGetAllPages, fetchGetMenuList } from '@/service/api';
 import { useTable, useTableOperate } from '@/hooks/common/table';
 import { $t } from '@/locales';
-import { yesOrNoRecord } from '@/constants/common';
-import { enableStatusRecord, menuTypeRecord } from '@/constants/business';
 import SvgIcon from '@/components/custom/svg-icon.vue';
 import MenuOperateModal, { type OperateType } from './modules/menu-operate-modal.vue';
 
@@ -106,7 +106,7 @@ const { columns, columnChecks, data, loading, pagination, getData, getDataByPage
     {
       prop: 'operate',
       label: $t('common.operate'),
-      width: 230,
+      width: 270,
       formatter: row => (
         <div class="flex-center justify-end pr-10px">
           {row.menuType === '1' && (

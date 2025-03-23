@@ -1,11 +1,11 @@
 <script setup lang="tsx">
 import { computed, ref, watch } from 'vue';
-import { useForm, useFormRules } from '@/hooks/common/form';
-import { $t } from '@/locales';
 import { enableStatusOptions, menuIconTypeOptions, menuTypeOptions } from '@/constants/business';
-import SvgIcon from '@/components/custom/svg-icon.vue';
-import { getLocalIcons } from '@/utils/icon';
 import { fetchGetAllRoles } from '@/service/api';
+import { useForm, useFormRules } from '@/hooks/common/form';
+import { getLocalIcons } from '@/utils/icon';
+import { $t } from '@/locales';
+import SvgIcon from '@/components/custom/svg-icon.vue';
 import {
   getLayoutAndPage,
   getPathParamFromRoutePath,
@@ -285,7 +285,7 @@ watch(
 <template>
   <ElDialog v-model="visible" :title="title" preset="card" class="w-800px">
     <ElScrollbar class="h-480px pr-20px">
-      <ElForm ref="formRef" :model="model" :rules="rules" label-placement="left" :label-width="100">
+      <ElForm ref="formRef" :model="model" :rules="rules" label-position="right" :label-width="100">
         <ElRow>
           <ElCol :span="12">
             <ElFormItem :label="$t('page.manage.menu.menuType')" prop="menuType">
