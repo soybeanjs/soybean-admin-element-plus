@@ -1,10 +1,10 @@
 <script setup lang="tsx">
+import { ref } from 'vue';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { usePagination } from '@sa/alova/client';
-import { ref } from 'vue';
+import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { batchDeleteUser, deleteUser, fetchGetUserList } from '@/service-alova/api';
 import { $t } from '@/locales';
-import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import useCheckedColumns from './hooks/use-checked-columns';
 import useTableOperate from './hooks/use-table-operate';
 import UserOperateDrawer from './modules/user-operate-drawer.vue';
@@ -143,7 +143,7 @@ const { columnChecks, columns } = useCheckedColumns<typeof fetchGetUserList>(() 
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <UserSearch v-model:model="searchParams" @search="getDataByPage" />
     <ElCard :header="$t('page.manage.user.title')" class="sm:flex-1-hidden card-wrapper" body-class="ht50">
-      <template #header-extra>
+      <template #header>
         <TableHeaderOperation
           v-model:columns="columnChecks"
           :disabled-delete="checkedRowKeys.length === 0"

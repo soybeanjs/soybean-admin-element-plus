@@ -1,9 +1,9 @@
 <script setup lang="tsx">
 import { ElButton, ElTag } from 'element-plus';
 import { utils, writeFile } from 'xlsx';
-import { useTable } from '@/hooks/common/table';
-import { fetchGetUserList } from '@/service/api';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
+import { fetchGetUserList } from '@/service/api';
+import { useTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 
 defineOptions({ name: 'ExcelPage' });
@@ -149,7 +149,6 @@ function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): column is UI.Table
           </ElButton>
         </div>
       </template>
-      <template #header-extra></template>
       <div class="h-[calc(100%-50px)]">
         <ElTable v-loading="loading" height="100%" border class="sm:h-full" :data="data" row-key="id">
           <ElTableColumn v-for="col in columns" :key="col.prop" v-bind="col" />
