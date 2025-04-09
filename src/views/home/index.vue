@@ -14,19 +14,15 @@ const gap = computed(() => (appStore.isMobile ? 0 : 16));
 </script>
 
 <template>
-  <ElSpace direction="vertical" fill class="pb-0" :size="0">
+  <ElSpace direction="vertical" fill class="full-space pb-0" :size="0">
     <HeaderBanner class="mb-16px" />
     <CardData class="mb-16px" />
-    <ElRow :gutter="gap">
+    <ElRow :gutter="gap" class="w-full">
       <ElCol :lg="14" :sm="24" class="mb-16px">
-        <ElCard class="card-wrapper">
-          <LineChart />
-        </ElCard>
+        <LineChart />
       </ElCol>
       <ElCol :lg="10" :sm="24" class="mb-16px">
-        <ElCard class="card-wrapper">
-          <PieChart />
-        </ElCard>
+        <PieChart />
       </ElCol>
     </ElRow>
     <ElRow :gutter="gap">
@@ -40,4 +36,10 @@ const gap = computed(() => (appStore.isMobile ? 0 : 16));
   </ElSpace>
 </template>
 
-<style scoped></style>
+<style scoped lang="scss">
+.full-space {
+  > :deep(.el-space__item) {
+    width: 100%;
+  }
+}
+</style>
