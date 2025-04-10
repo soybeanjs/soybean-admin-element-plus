@@ -192,14 +192,14 @@ function removeButton(index: number) {
 }
 
 function handleInitModel() {
-  Object.assign(model, createDefaultModel());
+  model.value = createDefaultModel();
 
   if (!props.rowData) return;
 
   if (props.operateType === 'addChild') {
     const { id } = props.rowData;
 
-    Object.assign(model, { parentId: id });
+    Object.assign(model.value, { parentId: id });
   }
 
   if (props.operateType === 'edit') {
@@ -208,7 +208,7 @@ function handleInitModel() {
     const { layout, page } = getLayoutAndPage(component);
     const { path, param } = getPathParamFromRoutePath(rest.routePath);
 
-    Object.assign(model, rest, { layout, page, routePath: path, pathParam: param });
+    Object.assign(model.value, rest, { layout, page, routePath: path, pathParam: param });
   }
 
   if (!model.value.query) {
