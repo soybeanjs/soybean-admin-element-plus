@@ -35,6 +35,7 @@ export function setupAppVersionNotification() {
 
     // Show update notification
     const n = window.$notification!({
+      duration: 0,
       title: $t('system.updateTitle'),
       message: h('div', {}, [
         h('p', {}, $t('system.updateContent')),
