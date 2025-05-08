@@ -3,10 +3,10 @@ import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { SimpleScrollbar } from '@sa/materials';
 import type { RouteKey } from '@elegant-router/types';
+import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
 import { useAppStore } from '@/store/modules/app';
 import { useRouteStore } from '@/store/modules/route';
 import { useRouterPush } from '@/hooks/common/router';
-import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
 import { useMenu } from '../../../context';
 import MenuItem from '../components/menu-item.vue';
 
@@ -47,6 +47,7 @@ watch(
         :default-active="selectedKey"
         :default-openeds="expandedKeys"
         :collapse="appStore.siderCollapse"
+        :collapse-transition="false"
         @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
       >
         <MenuItem v-for="item in routeStore.menus" :key="item.key" :item="item" :index="item.key" />
