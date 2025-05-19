@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
+import { useDocumentVisibility } from '@vueuse/core';
 import { SimpleScrollbar } from '@sa/materials';
 import type { RouteKey } from '@elegant-router/types';
 import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
@@ -30,6 +31,19 @@ function updateExpandedKeys() {
   expandedKeys.value = routeStore.getSelectedMenuKeyPath(selectedKey.value);
 }
 
+const visibility = useDocumentVisibility();
+
+const selectedKeyDummy = ref(selectedKey.value);
+
+// watch document.visibilityState
+watch(visibility, () => {
+  if (visibility.value === 'hidden') {
+    selectedKeyDummy.value = '';
+  } else {
+    selectedKeyDummy.value = selectedKey.value;
+  }
+});
+
 watch(
   () => route.name,
   () => {
@@ -44,7 +58,7 @@ watch(
     <SimpleScrollbar>
       <ElMenu
         mode="vertical"
-        :default-active="selectedKey"
+        :default-active="selectedKeyDummy"
         :default-openeds="expandedKeys"
         :collapse="appStore.siderCollapse"
         :collapse-transition="false"
