@@ -37,5 +37,8 @@ declare namespace StorageType {
       layout: UnionKey.ThemeLayoutMode;
       siderCollapse: boolean;
     };
+
+    /** The last login user id */
+    lastLoginUserId: string;
   }
 }
