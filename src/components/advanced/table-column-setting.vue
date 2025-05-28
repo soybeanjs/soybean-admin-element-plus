@@ -19,7 +19,7 @@ const columns = defineModel<UI.TableColumnCheck[]>('columns', {
         {{ $t('common.columnSetting') }}
       </ElButton>
     </template>
-    <VueDraggable v-model="columns" :animation="150" filter=".none_draggable">
+    <VueDraggable v-model="columns" :animation="150" filter=".none_draggable" class="h-[200px] overflow-y-auto">
       <div
         v-for="item in columns"
         :key="item.prop"
