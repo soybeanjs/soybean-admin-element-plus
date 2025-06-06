@@ -6,10 +6,10 @@ import type {
   Router
 } from 'vue-router';
 import type { RouteKey, RoutePath } from '@elegant-router/types';
-import { getRouteName } from '@/router/elegant/transform';
 import { useAuthStore } from '@/store/modules/auth';
 import { useRouteStore } from '@/store/modules/route';
 import { localStg } from '@/utils/storage';
+import { getRouteName } from '@/router/elegant/transform';
 
 /**
  * create route guard
@@ -166,7 +166,7 @@ function handleRouteSwitch(to: RouteLocationNormalized, from: RouteLocationNorma
   if (to.meta.href) {
     window.open(to.meta.href, '_blank');
 
-    next({ path: from.fullPath, replace: true, query: from.query, hash: to.hash });
+    next({ path: from.fullPath, replace: true, query: from.query, hash: from.hash });
 
     return;
   }

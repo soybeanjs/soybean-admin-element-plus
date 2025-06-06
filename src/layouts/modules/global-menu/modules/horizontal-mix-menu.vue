@@ -16,7 +16,7 @@ const appStore = useAppStore();
 const themeStore = useThemeStore();
 const { routerPushByKeyWithMetaQuery } = useRouterPush();
 const { allMenus, childLevelMenus, activeFirstLevelMenuKey, setActiveFirstLevelMenuKey } = useMixMenuContext();
-const { selectedKey } = useMenu();
+const { selectedKeyDummy, handleSelect } = useMenu();
 
 function handleSelectMixMenu(menu: App.Global.Menu) {
   setActiveFirstLevelMenuKey(menu.key);
@@ -33,8 +33,8 @@ function handleSelectMixMenu(menu: App.Global.Menu) {
       ellipsis
       class="w-full"
       mode="horizontal"
-      :default-active="selectedKey"
-      @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
+      :default-active="selectedKeyDummy"
+      @select="val => handleSelect(val as RouteKey)"
     >
       <MenuItem v-for="item in childLevelMenus" :key="item.key" :item="item" :index="item.key" />
     </ElMenu>

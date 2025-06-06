@@ -1,7 +1,9 @@
-import { computed, ref, watch } from 'vue';
+import { computed, nextTick, ref, watch } from 'vue';
 import { useRoute } from 'vue-router';
 import { useContext } from '@sa/hooks';
+import type { RouteKey } from '@elegant-router/types';
 import { useRouteStore } from '@/store/modules/route';
+import { useRouterPush } from '@/hooks/common/router';
 
 export const { setupStore: setupMixMenuContext, useStore: useMixMenuContext } = useContext('mix-menu', useMixMenu);
 
@@ -67,6 +69,7 @@ function useMixMenu() {
 
 export function useMenu() {
   const route = useRoute();
+  const { routerPushByKeyWithMetaQuery } = useRouterPush();
 
   const selectedKey = computed(() => {
     const { hideInMenu, activeMenu } = route.meta;
@@ -77,7 +80,28 @@ export function useMenu() {
     return routeName;
   });
 
+  const selectedKeyDummy = ref(selectedKey.value);
+
+  watch(
+    () => selectedKey.value,
+    val => {
+      selectedKeyDummy.value = val;
+    }
+  );
+
+  function handleSelect(key: RouteKey) {
+    selectedKeyDummy.value = key;
+
+    routerPushByKeyWithMetaQuery(key);
+
+    nextTick(() => {
+      selectedKeyDummy.value = selectedKey.value;
+    });
+  }
+
   return {
-    selectedKey
+    selectedKey,
+    selectedKeyDummy,
+    handleSelect
   };
 }

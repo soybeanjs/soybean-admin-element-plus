@@ -25,7 +25,7 @@ const {
   setActiveFirstLevelMenuKey,
   isActiveFirstLevelMenuHasChildren
 } = useMixMenuContext();
-const { selectedKey } = useMenu();
+const { selectedKey, selectedKeyDummy, handleSelect } = useMenu();
 
 function handleSelectMixMenu(key: RouteKey) {
   setActiveFirstLevelMenuKey(key);
@@ -70,9 +70,9 @@ watch(
     <SimpleScrollbar>
       <ElMenu
         mode="vertical"
-        :default-active="selectedKey"
+        :default-active="selectedKeyDummy"
         :collapse="appStore.siderCollapse"
-        @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
+        @select="val => handleSelect(val as RouteKey)"
       >
         <MenuItem v-for="item in childLevelMenus" :key="item.key" :item="item" :index="item.key" />
       </ElMenu>

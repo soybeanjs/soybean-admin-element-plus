@@ -4,12 +4,12 @@ import { useRoute } from 'vue-router';
 import { SimpleScrollbar } from '@sa/materials';
 import { useBoolean } from '@sa/hooks';
 import type { RouteKey } from '@elegant-router/types';
+import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
 import { useAppStore } from '@/store/modules/app';
 import { useThemeStore } from '@/store/modules/theme';
 import { useRouteStore } from '@/store/modules/route';
 import { useRouterPush } from '@/hooks/common/router';
 import { $t } from '@/locales';
-import { GLOBAL_SIDER_MENU_ID } from '@/constants/app';
 import { useMenu, useMixMenuContext } from '../../../context';
 import FirstLevelMenu from '../components/first-level-menu.vue';
 import GlobalLogo from '../../global-logo/index.vue';
@@ -33,7 +33,7 @@ const {
   getActiveFirstLevelMenuKey
   //
 } = useMixMenuContext();
-const { selectedKey } = useMenu();
+const { selectedKey, selectedKeyDummy, handleSelect } = useMenu();
 
 const inverted = computed(() => !themeStore.darkMode && themeStore.sider.inverted);
 
@@ -111,11 +111,7 @@ watch(
             />
           </header>
           <SimpleScrollbar>
-            <ElMenu
-              mode="vertical"
-              :default-active="selectedKey"
-              @select="val => routerPushByKeyWithMetaQuery(val as RouteKey)"
-            >
+            <ElMenu mode="vertical" :default-active="selectedKeyDummy" @select="val => handleSelect(val as RouteKey)">
               <MenuItem v-for="item in childLevelMenus" :key="item.key" :item="item" :index="item.key" />
             </ElMenu>
           </SimpleScrollbar>
