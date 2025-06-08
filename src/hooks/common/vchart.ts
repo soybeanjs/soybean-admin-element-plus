@@ -58,9 +58,9 @@ export function useVChart<T extends ISpec>(specFactory: () => T, hooks: ChartHoo
 
     Object.assign(spec, updatedOpts);
 
-    if (isRendered()) {
-      chart?.release();
-    }
+    // if (isRendered()) {
+    //   chart?.release();
+    // }
 
     chart?.updateSpec({ ...updatedOpts }, true);
 
