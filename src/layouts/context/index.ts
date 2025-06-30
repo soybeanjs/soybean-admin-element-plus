@@ -94,9 +94,11 @@ export function useMenu() {
 
     routerPushByKeyWithMetaQuery(key);
 
-    nextTick(() => {
-      selectedKeyDummy.value = selectedKey.value;
-    });
+    if (key.endsWith('-link')) {
+      nextTick(() => {
+        selectedKeyDummy.value = selectedKey.value;
+      });
+    }
   }
 
   return {
