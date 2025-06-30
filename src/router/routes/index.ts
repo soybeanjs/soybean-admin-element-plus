@@ -142,6 +142,7 @@ const customRoutes: CustomRoute[] = [
           i18nKey: 'route.document_project-link',
           order: 2,
           localIcon: 'logo',
+          // use href to open the page, the routeName must be ends with '-link'
           href: 'https://docs.soybeanjs.cn/zh'
         }
       },
