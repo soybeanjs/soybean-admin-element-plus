@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { computed, shallowRef, watch } from 'vue';
-import { $t } from '@/locales';
 import { fetchGetAllPages, fetchGetMenuTree } from '@/service/api';
+import { $t } from '@/locales';
 
 defineOptions({ name: 'MenuAuthModal' });
 
@@ -115,7 +115,7 @@ watch(visible, val => {
       :data="tree"
       node-key="id"
       show-checkbox
-      class="h-280px"
+      class="h-280px overflow-y-auto"
       :default-checked-keys="checks"
       @check-change="checkChange"
     />
