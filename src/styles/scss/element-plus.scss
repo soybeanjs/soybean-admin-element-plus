@@ -20,8 +20,9 @@ html.dark:root {
 
   --el-menu-item-height: 42px;
 }
-html.dark:root {
-  --el-menu-item-hover-fill: rgba(255, 255, 255, 0.05);
+html.dark:root,
+.bg-inverted {
+  --el-menu-item-hover-fill: rgba(255, 255, 255, 0.1);
 }
 
 .bg-inverted {
