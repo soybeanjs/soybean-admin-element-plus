@@ -1,10 +1,11 @@
 import { computed, effectScope, onScopeDispose, ref, toRefs, watch } from 'vue';
 import type { Ref } from 'vue';
+import { usePreferredColorScheme } from '@vueuse/core';
 import { defineStore } from 'pinia';
-import { useEventListener, usePreferredColorScheme } from '@vueuse/core';
 import { getPaletteColorByNumber } from '@sa/color';
-import { SetupStoreId } from '@/enum';
 import { localStg } from '@/utils/storage';
+import { themeSettings } from '@/theme/settings';
+import { SetupStoreId } from '@/enum';
 import {
   addThemeVarsToGlobal,
   createThemeToken,
@@ -59,9 +60,7 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
 
   /** Reset store */
   function resetStore() {
-    const themeStore = useThemeStore();
-
-    themeStore.$reset();
+    settings.value = themeSettings;
   }
 
   /**
@@ -155,7 +154,7 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
 
   /** Cache theme settings */
   function cacheThemeSettings() {
-    const isProd = import.meta.env.PROD;
+    const isProd = import.meta.env.MODE === 'prod';
 
     if (!isProd) return;
 
@@ -163,9 +162,9 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
   }
 
   // cache theme settings when page is closed or refreshed
-  useEventListener(window, 'beforeunload', () => {
-    cacheThemeSettings();
-  });
+  // useEventListener(window, 'beforeunload', () => {
+  //   cacheThemeSettings();
+  // });
 
   // watch store
   scope.run(() => {
@@ -195,6 +194,15 @@ export const useThemeStore = defineStore(SetupStoreId.Theme, () => {
         localStg.set('themeColor', val.primary);
       },
       { immediate: true }
+    );
+
+    // cache theme settings when settings change
+    watch(
+      settings,
+      () => {
+        cacheThemeSettings();
+      },
+      { deep: true }
     );
   });
 
