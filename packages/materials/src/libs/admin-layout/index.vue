@@ -69,7 +69,8 @@ const isContentScroll = computed(() => props.scrollMode === 'content');
 const isVertical = computed(() => props.mode === 'vertical');
 const isHorizontal = computed(() => props.mode === 'horizontal');
 
-const fixedHeaderAndTab = computed(() => props.fixedTop || (isHorizontal.value && isWrapperScroll.value));
+// fixedTop is theme.fixedHeaderAndTab
+const fixedHeaderAndTab = computed(() => props.fixedTop);
 
 // css
 const leftGapClass = computed(() => {
@@ -157,7 +158,7 @@ function handleClickMask() {
           <slot name="tab"></slot>
         </div>
         <div
-          v-show="fullContent || fixedHeaderAndTab"
+          v-show="fixedHeaderAndTab"
           class="flex-shrink-0 overflow-hidden"
           :class="[style['layout-tab-placement']]"
         ></div>
