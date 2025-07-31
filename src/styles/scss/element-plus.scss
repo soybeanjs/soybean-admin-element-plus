@@ -4,6 +4,7 @@ html:root,
 html.dark:root {
   @each $color in (primary, success, warning, info) {
     --el-color-#{$color}: rgb(var(--#{$color}-color));
+    --el-color-#{$color}-dark-2: rgb(var(--#{$color}-600-color));
     --el-color-#{$color}-light-3: rgb(var(--#{$color}-400-color));
     --el-color-#{$color}-light-5: rgb(var(--#{$color}-300-color));
     --el-color-#{$color}-light-7: rgb(var(--#{$color}-200-color));
@@ -11,6 +12,7 @@ html.dark:root {
   }
 
   --el-color-danger: rgb(var(--error-color));
+  --el-color-danger-dark-2: rgb(var(--error-600-color));
   --el-color-danger-light-3: rgb(var(--error-400-color));
   --el-color-danger-light-5: rgb(var(--error-300-color));
   --el-color-danger-light-7: rgb(var(--error-200-color));
