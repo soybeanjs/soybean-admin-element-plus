@@ -40,7 +40,12 @@ export function createRouteGuard(router: Router) {
 
     // if it is login route when logged in, then switch to the root page
     if (to.name === loginRoute && isLogin) {
-      next({ name: rootRoute });
+      const redirect = to.query?.redirect as string;
+      if (redirect) {
+        next({ path: redirect });
+      } else {
+        next({ name: rootRoute });
+      }
       return;
     }
 
