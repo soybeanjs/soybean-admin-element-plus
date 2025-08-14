@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { createTextVNode, defineComponent } from 'vue';
-
 import { ElMessage, ElMessageBox, ElNotification } from 'element-plus';
 
 defineOptions({ name: 'AppProvider' });

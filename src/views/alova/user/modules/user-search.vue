@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import { $t } from '@/locales';
-import { useForm, useFormRules } from '@/hooks/common/form';
 import { enableStatusOptions, userGenderOptions } from '@/constants/business';
+import { useForm, useFormRules } from '@/hooks/common/form';
 import { translateOptions } from '@/utils/common';
+import { $t } from '@/locales';
 
 defineOptions({ name: 'UserSearch' });
 

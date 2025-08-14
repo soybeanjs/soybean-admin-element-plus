@@ -1,6 +1,6 @@
-import type { TableColumnCheck } from '@sa/hooks';
 import { computed, ref } from 'vue';
 import type { TableColumnCtx } from 'element-plus';
+import type { TableColumnCheck } from '@sa/hooks';
 import { $t } from '@/locales';
 import type { AlovaGenerics, Method } from '~/packages/alova/src';
 
@@ -8,12 +8,13 @@ type TableAlovaApiFn<T = any, R = Api.Common.CommonSearchParams> = (
   params: R
 ) => Method<AlovaGenerics<Api.Common.PaginatingQueryRecord<T>>>;
 
-type PartialColumnCtx<T> = Partial<TableColumnCtx<T>>;
+type PartialColumnCtx<T extends object> = Partial<TableColumnCtx<T>>;
 // this hook is used to manage table columns
 // if you choose alova, you can move this hook to the `src/hooks` to handle all list page in your project
-export default function useCheckedColumns<A extends TableAlovaApiFn, T = Awaited<ReturnType<A>>['records'][number]>(
-  getColumns: () => PartialColumnCtx<T>[]
-) {
+export default function useCheckedColumns<
+  A extends TableAlovaApiFn,
+  T extends object = Awaited<ReturnType<A>>['records'][number]
+>(getColumns: () => PartialColumnCtx<T>[]) {
   const SELECTION_KEY = '__selection__';
 
   const EXPAND_KEY = '__expand__';
