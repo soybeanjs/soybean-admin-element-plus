@@ -2,9 +2,9 @@
 import { computed, ref, watch } from 'vue';
 import type { VNode } from 'vue';
 import type { DropdownInstance } from 'element-plus';
-import { $t } from '@/locales';
 import { useTabStore } from '@/store/modules/tab';
 import { useSvgIcon } from '@/hooks/common/icon';
+import { $t } from '@/locales';
 
 defineOptions({ name: 'ContextMenu' });
 

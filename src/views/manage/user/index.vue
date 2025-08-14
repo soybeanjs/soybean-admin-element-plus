@@ -1,9 +1,9 @@
 <script setup lang="tsx">
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
-import { fetchGetUserList } from '@/service/api';
-import { $t } from '@/locales';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
+import { fetchGetUserList } from '@/service/api';
 import { useTable, useTableOperate } from '@/hooks/common/table';
+import { $t } from '@/locales';
 import UserOperateDrawer from './modules/user-operate-drawer.vue';
 import UserSearch from './modules/user-search.vue';
 
