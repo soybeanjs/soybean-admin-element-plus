@@ -13,8 +13,8 @@
     }
   },
   "dependencies": {
-    "@alova/mock": "2.0.12",
+    "@alova/mock": "2.0.17",
     "@sa/utils": "workspace:*",
-    "alova": "3.2.9"
+    "alova": "3.3.4"
   }
 }
