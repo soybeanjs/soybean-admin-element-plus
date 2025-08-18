@@ -137,7 +137,7 @@ function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): column is UI.Table
 
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
-    <ElCard class="sm:flex-1-hidden card-wrapper">
+    <ElCard class="card-wrapper sm:flex-1-hidden">
       <template #header>
         <div class="flex items-center justify-between">
           <p>Excel导出</p>
