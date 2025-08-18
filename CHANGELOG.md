@@ -1,6 +1,73 @@
 # Changelog
 
 
+## [v1.3.13](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.12...v1.3.13) (2025-08-18)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **docs**:
+  - add GitCode star badge to README files &nbsp;-&nbsp; by @soybeanjs [<samp>(a2e1b)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/a2e1b6b)
+- **projects**:
+  - ✨  Adjust the display duration of the update notification. Fixed [#79] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/79 [<samp>(66aab)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/66aab7e)
+  - ✨  support vite devtools specify the editor by launchEditor option. &nbsp;-&nbsp; by **一寸灰** [<samp>(a1455)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/a14550e)
+  - ✨  clear tabs cache when switching users. &nbsp;-&nbsp; by **一寸灰** [<samp>(311bd)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/311bd75)
+- **styles**:
+  - Page format abnormality issue when updating column settings to a large number &nbsp;-&nbsp; by @YSH0313 and **袁少航** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/102 [<samp>(325a7)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/325a7f5)
+- **types**:
+  - ✨  enhance Option type to support customizable label types. &nbsp;-&nbsp; by **一寸灰** [<samp>(d96db)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/d96db31)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **packages**:
+  - 🐛  fix full-content display issues when fixedHeaderAndTab is false. fixed [#131] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/131 [<samp>(f8465)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/f8465da)
+- **projects**:
+  - 🐛  fix active tab switch issue after removal. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/72 [<samp>(49e73)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/49e73a0)
+  - fix example page ElCard slot name error. &nbsp;-&nbsp; by @MosYCo and **yuyang** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/74 [<samp>(9cd3a)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/9cd3ac5)
+  - 🐛  fix the title in ElCard. &nbsp;-&nbsp; by **一寸灰** [<samp>(e6f04)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/e6f04d1)
+  - 🐛  fix responsive issues on the homepage. fixed [#76] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/76 [<samp>(12c82)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/12c82dd)
+  - 🐛  fix the edit echo issue on the menu management page. fixed [#80] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/80 [<samp>(5a7b8)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/5a7b808)
+  - 🐛  set ElMenu collapse-transition false. fixed [#57] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/57 [<samp>(9b935)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/9b93514)
+  - 🐛  Fix the external link routing highlighting issue. fixed [#94] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/94 [<samp>(795d2)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/795d2c9)
+  - 🐛  fix menu active issue. fixed [#101][#94] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/101 and https://github.com/skyfeiz/soybean-admin-element-plus/issues/94 [<samp>(87a11)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/87a113c)
+  - 🐛  fix the error produced when calling the updateSpec method in vchart. fixed [#105] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/105 [<samp>(f52b0)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/f52b009)
+  - 🐛  fix menu highlighting in dark theme. fixed [#98] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/98 [<samp>(f1485)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/f14854e)
+  - 🐛  fix the menu switching collapse issue. fixed [#111] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/111 [<samp>(020f5)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/020f57c)
+  - 🐛  add overflow-y-auto in ElTree. fixed [#113] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/113 [<samp>(25918)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/2591857)
+  - 🐛  fix the menu hover highlight in bg-inverted. fixed [#115] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/115 [<samp>(0e4bb)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/0e4bb80)
+  - 🐛  adjust the read strategy for theme configuration. fixed [#117] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/117 [<samp>(9fe1c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/9fe1c42)
+  - 🐛  fix post-refresh redirect routing issue. fixed [#125] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/125 [<samp>(df114)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/df1143f)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **hooks**:
+  - 🚸  remove obsolete disabling cache. &nbsp;-&nbsp; by **一寸灰** [<samp>(e19e9)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/e19e94d)
+  - update detection function to cover the exceptions that occur when the request fails. fixed [#90] &nbsp;-&nbsp; by @Azir-11 in https://github.com/skyfeiz/soybean-admin-element-plus/issues/90 [<samp>(5d9a9)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/5d9a9f3)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **projects**: ♻️  sync code: support proxy log in terminal &nbsp;-&nbsp; by **skyfeiz** [<samp>(1d890)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/1d89061)
+
+### &nbsp;&nbsp;&nbsp;📖 Documentation
+
+- **projects**:
+  - add gitcode link &nbsp;-&nbsp; by @soybeanjs [<samp>(f8a20)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/f8a2045)
+  - ✏️  update the Vite version of the project description. &nbsp;-&nbsp; by **一寸灰** [<samp>(c95d5)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c95d5f9)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: ⬆️  update deps. &nbsp;-&nbsp; by **skyfeiz** [<samp>(c675c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c675c41)
+- **projects**: ⬆️  update vscode settings and launch. &nbsp;-&nbsp; by **一寸灰** [<samp>(60c52)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/60c527d)
+
+### &nbsp;&nbsp;&nbsp;🎨 Styles
+
+- improve the coverage of theme colors. &nbsp;-&nbsp; by @Gahotx [<samp>(8c215)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/8c215bf)
+- **projects**: 💄  adjust form label styles. fixed [#68] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-element-plus/issues/68 [<samp>(6fe03)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/6fe03cc)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![Gahotx](https://github.com/Gahotx.png?size=48)](https://github.com/Gahotx)&nbsp;&nbsp;[![YSH0313](https://github.com/YSH0313.png?size=48)](https://github.com/YSH0313)&nbsp;&nbsp;[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;[![Azir-11](https://github.com/Azir-11.png?size=48)](https://github.com/Azir-11)&nbsp;&nbsp;[![MosYCo](https://github.com/MosYCo.png?size=48)](https://github.com/MosYCo)&nbsp;&nbsp;
+[skyfeiz](mailto:webzhangfei@163.com),&nbsp;[一寸灰](mailto:webyicunhui@outlook.com),&nbsp;[袁少航](mailto:yuanshaohang@dataoceanai.com),&nbsp;[yuyang](mailto:yuyang@7moor.com)
+
 ## [v1.3.12](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.11...v1.3.12) (2025-03-21)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
