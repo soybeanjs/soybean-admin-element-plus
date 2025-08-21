@@ -90,6 +90,7 @@ async function getHtmlBuildTime(): Promise<string | null> {
     const res = await fetch(`${baseUrl}index.html?time=${Date.now()}`);
 
     if (!res.ok) {
+      // eslint-disable-next-line no-console
       console.error('getHtmlBuildTime error:', res.status, res.statusText);
       return null;
     }
@@ -98,6 +99,7 @@ async function getHtmlBuildTime(): Promise<string | null> {
     const match = html.match(/<meta name="buildTime" content="(.*)">/);
     return match?.[1] || null;
   } catch (error) {
+    // eslint-disable-next-line no-console
     console.error('getHtmlBuildTime error:', error);
     return null;
   }
