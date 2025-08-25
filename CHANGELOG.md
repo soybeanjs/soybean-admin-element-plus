@@ -1,6 +1,31 @@
 # Changelog
 
 
+## [v1.3.14](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.13...v1.3.14) (2025-08-25)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **projects**: ✨ sync global search button toggle. &nbsp;-&nbsp; by **一寸灰** [<samp>(8abee)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/8abee1b)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **projects**:
+  - 🎨  optimize tab deletion logic. &nbsp;-&nbsp; by **skyfeiz** [<samp>(0313c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/0313c07)
+  - 🎨  remove redundant authStore declaration in resetStore function &nbsp;-&nbsp; by **skyfeiz** [<samp>(e958f)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/e958f75)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **hooks**: ♻️ sync refactor useCountDown hook. &nbsp;-&nbsp; by **一寸灰** [<samp>(6ae21)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/6ae214c)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: ⬆️  update deps. &nbsp;-&nbsp; by **skyfeiz** [<samp>(c675c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c675c41)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+
+[skyfeiz](mailto:webzhangfei@163.com),&nbsp;[一寸灰](mailto:webyicunhui@outlook.com)
+
 ## [v1.3.13](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.12...v1.3.13) (2025-08-18)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
