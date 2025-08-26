@@ -123,7 +123,10 @@ const isWrapperScrollMode = computed(() => themeStore.layout.scrollMode === 'wra
     <SettingItem key="8" :label="$t('theme.watermark.visible')">
       <ElSwitch v-model="themeStore.watermark.visible" />
     </SettingItem>
-    <SettingItem v-if="themeStore.watermark.visible" key="8-1" :label="$t('theme.watermark.text')">
+    <SettingItem v-if="themeStore.watermark.visible" key="8-1" :label="$t('theme.watermark.enableUserName')">
+      <ElSwitch v-model="themeStore.watermark.enableUserName" />
+    </SettingItem>
+    <SettingItem v-if="themeStore.watermark.visible" key="8-2" :label="$t('theme.watermark.text')">
       <ElInput
         v-model="themeStore.watermark.text"
         autosize
