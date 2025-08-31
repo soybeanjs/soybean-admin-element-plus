@@ -1,29 +1,35 @@
 <script setup lang="tsx">
+import { reactive } from 'vue';
 import { ElButton, ElTag } from 'element-plus';
 import { utils, writeFile } from 'xlsx';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { fetchGetUserList } from '@/service/api';
-import { useTable } from '@/hooks/common/table';
+import { defaultTransform, useUIPaginatedTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 
 defineOptions({ name: 'ExcelPage' });
 
-const { columns, data, loading } = useTable({
-  apiFn: fetchGetUserList,
-  showTotal: true,
-  apiParams: {
-    current: 1,
-    size: 999,
-    status: undefined,
-    userName: undefined,
-    userGender: undefined,
-    nickName: undefined,
-    userPhone: undefined,
-    userEmail: undefined
+const searchParams: Api.SystemManage.UserSearchParams = reactive({
+  current: 1,
+  size: 10,
+  status: undefined,
+  userName: undefined,
+  userGender: undefined,
+  nickName: undefined,
+  userPhone: undefined,
+  userEmail: undefined
+});
+
+const { columns, data, loading } = useUIPaginatedTable({
+  api: () => fetchGetUserList(searchParams),
+  transform: response => defaultTransform(response),
+  onPaginationParamsChange: params => {
+    searchParams.current = params.currentPage;
+    searchParams.size = params.pageSize;
   },
   columns: () => [
     { type: 'selection', width: 48 },
-    { prop: 'index', label: $t('common.index'), width: 64 },
+    { type: 'index', label: $t('common.index'), width: 64 },
     { prop: 'userName', label: $t('page.manage.user.userName'), minWidth: 100 },
     {
       prop: 'userGender',
@@ -91,10 +97,7 @@ function exportExcel() {
   writeFile(workBook, '用户数据.xlsx');
 }
 
-function getTableValue(
-  col: UI.TableColumn<UI.TableDataWithIndex<Api.SystemManage.User>>,
-  item: UI.TableDataWithIndex<Api.SystemManage.User>
-) {
+function getTableValue(col: UI.TableColumn<Api.SystemManage.User>, item: Api.SystemManage.User) {
   if (!isTableColumnHasKey(col)) {
     return '';
   }
@@ -118,19 +121,17 @@ function getTableValue(
   }
 
   if (prop in item) {
-    return item[prop as keyof UI.TableDataWithIndex<Api.SystemManage.User>];
+    return item[prop as keyof Api.SystemManage.User];
   }
 
   return '';
 }
 
-function isTableColumnHasKey<T>(column: UI.TableColumn<T>): column is UI.TableColumnWithKey<T> {
+function isTableColumnHasKey<T>(column: UI.TableColumn<T>): boolean {
   return Boolean((column as UI.TableColumnWithKey<T>).prop);
 }
 
-function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): column is UI.TableColumnWithKey<T> & {
-  label: string;
-} {
+function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): boolean {
   return Boolean((column as UI.TableColumnWithKey<T>).label);
 }
 </script>

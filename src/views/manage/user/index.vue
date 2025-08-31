@@ -1,40 +1,36 @@
 <script setup lang="tsx">
+import { reactive } from 'vue';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { fetchGetUserList } from '@/service/api';
-import { useTable, useTableOperate } from '@/hooks/common/table';
+import { defaultTransform, useTableOperate, useUIPaginatedTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 import UserOperateDrawer from './modules/user-operate-drawer.vue';
 import UserSearch from './modules/user-search.vue';
 
 defineOptions({ name: 'UserManage' });
 
-const {
-  columns,
-  columnChecks,
-  data,
-  getData,
-  getDataByPage,
-  loading,
-  mobilePagination,
-  searchParams,
-  resetSearchParams
-} = useTable({
-  apiFn: fetchGetUserList,
-  showTotal: true,
-  apiParams: {
-    current: 1,
-    size: 10,
-    status: undefined,
-    userName: undefined,
-    userGender: undefined,
-    nickName: undefined,
-    userPhone: undefined,
-    userEmail: undefined
+const searchParams: Api.SystemManage.UserSearchParams = reactive({
+  current: 1,
+  size: 10,
+  status: undefined,
+  userName: undefined,
+  userGender: undefined,
+  nickName: undefined,
+  userPhone: undefined,
+  userEmail: undefined
+});
+
+const { columns, columnChecks, data, getData, getDataByPage, loading, mobilePagination } = useUIPaginatedTable({
+  api: () => fetchGetUserList(searchParams),
+  transform: response => defaultTransform(response),
+  onPaginationParamsChange: params => {
+    searchParams.current = params.currentPage;
+    searchParams.size = params.pageSize;
   },
   columns: () => [
     { type: 'selection', width: 48 },
-    { prop: 'index', label: $t('common.index'), width: 64 },
+    { type: 'index', label: $t('common.index'), width: 64 },
     { prop: 'userName', label: $t('page.manage.user.userName'), minWidth: 100 },
     {
       prop: 'userGender',
@@ -111,7 +107,7 @@ const {
   onBatchDeleted,
   onDeleted
   // closeDrawer
-} = useTableOperate(data, getData);
+} = useTableOperate(data, 'id', getData);
 
 async function handleBatchDelete() {
   // eslint-disable-next-line no-console
@@ -127,6 +123,17 @@ function handleDelete(id: number) {
   // request
 
   onDeleted();
+}
+
+function resetSearchParams() {
+  searchParams.current = 1;
+  searchParams.size = 10;
+  searchParams.status = undefined;
+  searchParams.userName = undefined;
+  searchParams.userGender = undefined;
+  searchParams.nickName = undefined;
+  searchParams.userPhone = undefined;
+  searchParams.userEmail = undefined;
 }
 
 function edit(id: number) {

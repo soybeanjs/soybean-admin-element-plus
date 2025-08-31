@@ -1,34 +1,31 @@
 <script setup lang="tsx">
+import { reactive } from 'vue';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { enableStatusRecord } from '@/constants/business';
 import { fetchGetRoleList } from '@/service/api';
-import { useTable, useTableOperate } from '@/hooks/common/table';
+import { defaultTransform, useTableOperate, useUIPaginatedTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 import RoleOperateDrawer from './modules/role-operate-drawer.vue';
 import RoleSearch from './modules/role-search.vue';
 
-const {
-  columns,
-  columnChecks,
-  data,
-  loading,
-  getData,
-  getDataByPage,
-  mobilePagination,
-  searchParams,
-  resetSearchParams
-} = useTable({
-  apiFn: fetchGetRoleList,
-  apiParams: {
-    current: 1,
-    size: 10,
-    status: undefined,
-    roleName: undefined,
-    roleCode: undefined
+const searchParams: Api.SystemManage.RoleSearchParams = reactive({
+  current: 1,
+  size: 10,
+  status: undefined,
+  roleName: undefined,
+  roleCode: undefined
+});
+
+const { columns, columnChecks, data, loading, getData, getDataByPage, mobilePagination } = useUIPaginatedTable({
+  api: () => fetchGetRoleList(searchParams),
+  transform: response => defaultTransform(response),
+  onPaginationParamsChange: params => {
+    searchParams.current = params.currentPage;
+    searchParams.size = params.pageSize;
   },
   columns: () => [
     { type: 'selection', width: 48 },
-    { prop: 'index', label: $t('common.index'), width: 64 },
+    { type: 'index', label: $t('common.index'), width: 64 },
     { prop: 'roleName', label: $t('page.manage.role.roleName'), minWidth: 120 },
     { prop: 'roleCode', label: $t('page.manage.role.roleCode'), minWidth: 120 },
     { prop: 'roleDesc', label: $t('page.manage.role.roleDesc'), minWidth: 120 },
@@ -85,7 +82,7 @@ const {
   onBatchDeleted,
   onDeleted
   // closeDrawer
-} = useTableOperate(data, getData);
+} = useTableOperate(data, 'id', getData);
 
 async function handleBatchDelete() {
   // eslint-disable-next-line no-console
@@ -102,6 +99,14 @@ function handleDelete(id: number) {
   console.log(id);
 
   onDeleted();
+}
+
+function resetSearchParams() {
+  searchParams.current = 1;
+  searchParams.size = 10;
+  searchParams.status = undefined;
+  searchParams.roleName = undefined;
+  searchParams.roleCode = undefined;
 }
 
 function edit(id: number) {

@@ -6,7 +6,7 @@ import { useBoolean } from '@sa/hooks';
 import { yesOrNoRecord } from '@/constants/common';
 import { enableStatusRecord, menuTypeRecord } from '@/constants/business';
 import { fetchGetAllPages, fetchGetMenuList } from '@/service/api';
-import { useTable, useTableOperate } from '@/hooks/common/table';
+import { defaultTransform, useTableOperate, useUIPaginatedTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 import SvgIcon from '@/components/custom/svg-icon.vue';
 import MenuOperateModal, { type OperateType } from './modules/menu-operate-modal.vue';
@@ -15,8 +15,9 @@ const { bool: visible, setTrue: openModal } = useBoolean();
 
 const wrapperRef = ref<HTMLElement | null>(null);
 
-const { columns, columnChecks, data, loading, pagination, getData, getDataByPage } = useTable({
-  apiFn: fetchGetMenuList,
+const { columns, columnChecks, data, loading, pagination, getData, getDataByPage } = useUIPaginatedTable({
+  api: () => fetchGetMenuList(),
+  transform: response => defaultTransform(response),
   columns: () => [
     { type: 'selection', width: 48 },
     { prop: 'id', label: $t('page.manage.menu.id') },
@@ -132,7 +133,7 @@ const { columns, columnChecks, data, loading, pagination, getData, getDataByPage
   ]
 });
 
-const { checkedRowKeys, onBatchDeleted, onDeleted } = useTableOperate(data, getData);
+const { checkedRowKeys, onBatchDeleted, onDeleted } = useTableOperate(data, 'id', getData);
 
 const operateType = ref<OperateType>('add');
 
