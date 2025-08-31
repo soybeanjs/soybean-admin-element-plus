@@ -28,25 +28,29 @@ export default function useCheckedColumns<
         checks.push({
           prop: SELECTION_KEY,
           label: $t('common.check'),
-          checked: true
+          checked: true,
+          visible: true
         });
       } else if (column.type === 'expand') {
         checks.push({
           prop: EXPAND_KEY,
           label: $t('common.expandColumn'),
-          checked: true
+          checked: true,
+          visible: true
         });
       } else if (column.type === 'index') {
         checks.push({
           prop: INDEX_KEY,
           label: $t('common.index'),
-          checked: true
+          checked: true,
+          visible: true
         });
       } else {
         checks.push({
           prop: column.prop as string,
           label: column.label as string,
-          checked: true
+          checked: true,
+          visible: true
         });
       }
     });

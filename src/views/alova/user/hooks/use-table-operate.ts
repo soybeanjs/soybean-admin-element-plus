@@ -4,7 +4,7 @@ import { useBoolean } from '@sa/hooks';
 import { jsonClone } from '@sa/utils';
 import { $t } from '@/locales';
 
-type TableData = UI.TableData;
+type TableData = Api.Common.CommonRecord<object>;
 interface Operations<T> {
   delete?: (row: T) => Promise<void>;
   batchDelete?: (rows: T[]) => Promise<void>;
