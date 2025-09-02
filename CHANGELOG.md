@@ -1,6 +1,32 @@
 # Changelog
 
 
+## [v1.3.15](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.14...v1.3.15) (2025-09-02)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **projects**: ✨ add configurable user name watermark option. &nbsp;-&nbsp; by **一寸灰** [<samp>(3e65c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/3e65cd3)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **projects**:
+  - 🎨  optimize tab deletion logic. &nbsp;-&nbsp; by **skyfeiz** [<samp>(0313c)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/0313c07)
+  - 🎨  remove redundant authStore declaration in resetStore function &nbsp;-&nbsp; by **skyfeiz** [<samp>(e958f)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/e958f75)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **hooks**: ♻️  sync refactor useTable and enhance type definitions. &nbsp;-&nbsp; by **一寸灰** [<samp>(c4cde)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c4cdee3)
+- **projects**: 🔥  remove unused lifecycle hooks and clean up script setup. &nbsp;-&nbsp; by **一寸灰** [<samp>(c420f)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/c420f37)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**: ⬆️  update deps. &nbsp;-&nbsp; by **skyfeiz** [<samp>(55e4e)</samp>](https://github.com/skyfeiz/soybean-admin-element-plus/commit/55e4e6f)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+
+[skyfeiz](mailto:webzhangfei@163.com),&nbsp;[一寸灰](mailto:webyicunhui@outlook.com)
+
 ## [v1.3.14](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.13...v1.3.14) (2025-08-25)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
