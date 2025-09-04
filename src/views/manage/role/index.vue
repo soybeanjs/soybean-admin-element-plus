@@ -8,15 +8,23 @@ import { $t } from '@/locales';
 import RoleOperateDrawer from './modules/role-operate-drawer.vue';
 import RoleSearch from './modules/role-search.vue';
 
-const searchParams: Api.SystemManage.RoleSearchParams = reactive({
-  current: 1,
-  size: 10,
-  status: undefined,
-  roleName: undefined,
-  roleCode: undefined
-});
+const searchParams = reactive(getInitSearchParams());
+
+function getInitSearchParams(): Api.SystemManage.RoleSearchParams {
+  return {
+    current: 1,
+    size: 10,
+    status: undefined,
+    roleName: undefined,
+    roleCode: undefined
+  };
+}
 
 const { columns, columnChecks, data, loading, getData, getDataByPage, mobilePagination } = useUIPaginatedTable({
+  paginationProps: {
+    currentPage: searchParams.current,
+    pageSize: searchParams.size
+  },
   api: () => fetchGetRoleList(searchParams),
   transform: response => defaultTransform(response),
   onPaginationParamsChange: params => {
@@ -102,11 +110,7 @@ function handleDelete(id: number) {
 }
 
 function resetSearchParams() {
-  searchParams.current = 1;
-  searchParams.size = 10;
-  searchParams.status = undefined;
-  searchParams.roleName = undefined;
-  searchParams.roleCode = undefined;
+  Object.assign(searchParams, getInitSearchParams());
 }
 
 function edit(id: number) {

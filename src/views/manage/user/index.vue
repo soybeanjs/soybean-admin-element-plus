@@ -10,20 +10,30 @@ import UserSearch from './modules/user-search.vue';
 
 defineOptions({ name: 'UserManage' });
 
-const searchParams: Api.SystemManage.UserSearchParams = reactive({
-  current: 1,
-  size: 10,
-  status: undefined,
-  userName: undefined,
-  userGender: undefined,
-  nickName: undefined,
-  userPhone: undefined,
-  userEmail: undefined
-});
+const searchParams = reactive(getInitSearchParams());
+
+function getInitSearchParams(): Api.SystemManage.UserSearchParams {
+  return {
+    current: 1,
+    size: 30,
+    status: undefined,
+    userName: undefined,
+    userGender: undefined,
+    nickName: undefined,
+    userPhone: undefined,
+    userEmail: undefined
+  };
+}
 
 const { columns, columnChecks, data, getData, getDataByPage, loading, mobilePagination } = useUIPaginatedTable({
+  paginationProps: {
+    currentPage: searchParams.current,
+    pageSize: searchParams.size
+  },
   api: () => fetchGetUserList(searchParams),
-  transform: response => defaultTransform(response),
+  transform: response => {
+    return defaultTransform(response);
+  },
   onPaginationParamsChange: params => {
     searchParams.current = params.currentPage;
     searchParams.size = params.pageSize;
@@ -126,14 +136,7 @@ function handleDelete(id: number) {
 }
 
 function resetSearchParams() {
-  searchParams.current = 1;
-  searchParams.size = 10;
-  searchParams.status = undefined;
-  searchParams.userName = undefined;
-  searchParams.userGender = undefined;
-  searchParams.nickName = undefined;
-  searchParams.userPhone = undefined;
-  searchParams.userEmail = undefined;
+  Object.assign(searchParams, getInitSearchParams());
 }
 
 function edit(id: number) {

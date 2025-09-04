@@ -73,7 +73,7 @@ export function useUITable<ResponseData, ApiData>(options: UseUITableOptions<Res
 type PaginationParams = Pick<PaginationProps, 'currentPage' | 'pageSize'>;
 
 type UseUIPaginatedTableOptions<ResponseData, ApiData> = UseUITableOptions<ResponseData, ApiData, true> & {
-  paginationProps?: Omit<PaginationProps, 'currentPage' | 'pageSize' | 'total'>;
+  paginationProps?: Partial<Omit<PaginationProps, 'total'>>;
   /**
    * whether to show the total count of the table
    *
