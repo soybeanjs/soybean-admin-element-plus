@@ -19,7 +19,7 @@ const { columns, columnChecks, data, loading, pagination, getData, getDataByPage
   api: () => fetchGetMenuList(),
   transform: response => defaultTransform(response),
   columns: () => [
-    { type: 'selection', width: 48 },
+    { prop: 'selection', type: 'selection', width: 48 },
     { prop: 'id', label: $t('page.manage.menu.id') },
     {
       prop: 'menuType',
