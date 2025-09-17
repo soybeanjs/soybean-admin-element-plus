@@ -39,8 +39,8 @@ const { columns, columnChecks, data, getData, getDataByPage, loading, mobilePagi
     searchParams.size = params.pageSize;
   },
   columns: () => [
-    { type: 'selection', width: 48 },
-    { type: 'index', label: $t('common.index'), width: 64 },
+    { prop: 'selection', type: 'selection', width: 48 },
+    { prop: 'index', type: 'index', label: $t('common.index'), width: 64 },
     { prop: 'userName', label: $t('page.manage.user.userName'), minWidth: 100 },
     {
       prop: 'userGender',

@@ -32,8 +32,8 @@ const { columns, columnChecks, data, loading, getData, getDataByPage, mobilePagi
     searchParams.size = params.pageSize;
   },
   columns: () => [
-    { type: 'selection', width: 48 },
-    { type: 'index', label: $t('common.index'), width: 64 },
+    { prop: 'selection', type: 'selection', width: 48 },
+    { prop: 'index', type: 'index', label: $t('common.index'), width: 64 },
     { prop: 'roleName', label: $t('page.manage.role.roleName'), minWidth: 120 },
     { prop: 'roleCode', label: $t('page.manage.role.roleCode'), minWidth: 120 },
     { prop: 'roleDesc', label: $t('page.manage.role.roleDesc'), minWidth: 120 },
