@@ -1,5 +1,5 @@
 <script setup lang="tsx">
-import { computed, ref, watch } from 'vue';
+import { computed, h, ref, watch } from 'vue';
 import { enableStatusOptions, menuIconTypeOptions, menuTypeOptions } from '@/constants/business';
 import { fetchGetAllRoles } from '@/service/api';
 import { useForm, useFormRules } from '@/hooks/common/form';
@@ -122,14 +122,15 @@ const disabledMenuType = computed(() => props.operateType === 'edit');
 
 const localIcons = getLocalIcons();
 const localIconOptions = localIcons.map(item => ({
-  label: () => (
-    <div class="flex-y-center gap-16px">
-      <SvgIcon localIcon={item} class="text-icon" />
-      <span>{item}</span>
-    </div>
-  ),
   value: item
 }));
+
+function getIconLabelVNode(value: string) {
+  return h('div', { class: 'flex-y-center gap-16px' }, [
+    h(SvgIcon, { localIcon: value, class: 'text-icon' }),
+    h('span', { class: 'text-sm' }, value)
+  ]);
+}
 
 const showLayout = computed(() => model.value.parentId === 0);
 
@@ -370,11 +371,14 @@ watch(
                 </ElInput>
               </template>
               <template v-if="model.iconType === '2'">
-                <ElSelect
-                  v-model="model.icon"
-                  :placeholder="$t('page.manage.menu.form.localIcon')"
-                  :options="localIconOptions"
-                />
+                <ElSelect v-model="model.icon" :placeholder="$t('page.manage.menu.form.localIcon')">
+                  <template #label="{ value }">
+                    <component :is="getIconLabelVNode(value)" />
+                  </template>
+                  <ElOption v-for="{ value } in localIconOptions" :key="value" :value="value">
+                    <component :is="getIconLabelVNode(value)" />
+                  </ElOption>
+                </ElSelect>
               </template>
             </ElFormItem>
           </ElCol>
