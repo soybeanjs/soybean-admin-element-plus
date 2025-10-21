@@ -26,7 +26,9 @@ const columns = defineModel<UI.TableColumnCheck[]>('columns', {
         class="h-36px flex-y-center rd-4px hover:(bg-primary bg-opacity-20)"
       >
         <icon-mdi-drag class="mr-8px h-full cursor-move text-icon" />
-        <ElCheckbox v-model="item.checked" class="none_draggable flex-1">{{ item.label }}</ElCheckbox>
+        <ElTooltip :content="item.label as string" :disabled="item.label.length < 10" placement="top">
+          <ElCheckbox v-model="item.checked" class="none_draggable flex-1 overflow-hidden">{{ item.label }}</ElCheckbox>
+        </ElTooltip>
       </div>
     </VueDraggable>
   </ElPopover>
