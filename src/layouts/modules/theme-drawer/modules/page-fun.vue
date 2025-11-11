@@ -1,11 +1,6 @@
 <script setup lang="ts">
 import { computed } from 'vue';
-import {
-  resetCacheStrategyOptions,
-  themePageAnimationModeOptions,
-  themeScrollModeOptions,
-  themeTabModeOptions
-} from '@/constants/app';
+import { themePageAnimationModeOptions, themeScrollModeOptions, themeTabModeOptions } from '@/constants/app';
 import { useThemeStore } from '@/store/modules/theme';
 import { translateOptions } from '@/utils/common';
 import { $t } from '@/locales';
@@ -25,16 +20,6 @@ const isWrapperScrollMode = computed(() => themeStore.layout.scrollMode === 'wra
 <template>
   <ElDivider>{{ $t('theme.pageFunTitle') }}</ElDivider>
   <TransitionGroup tag="div" name="setting-list" class="flex-col-stretch gap-12px">
-    <SettingItem key="1" :label="$t('theme.resetCacheStrategy.title')">
-      <ElSelect v-model="themeStore.resetCacheStrategy" size="small" class="w-120px">
-        <ElOption
-          v-for="{ label, value } in translateOptions(resetCacheStrategyOptions)"
-          :key="value"
-          :label="label"
-          :value="value"
-        />
-      </ElSelect>
-    </SettingItem>
     <SettingItem key="1" :label="$t('theme.scrollMode.title')">
       <ElSelect v-model="themeStore.layout.scrollMode" size="small" class="w-120px">
         <ElOption
