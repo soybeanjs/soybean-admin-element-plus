@@ -1,5 +1,5 @@
 <script setup lang="tsx">
-import { reactive } from 'vue';
+import { ref } from 'vue';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { fetchGetUserList } from '@/service/api';
@@ -10,7 +10,7 @@ import UserSearch from './modules/user-search.vue';
 
 defineOptions({ name: 'UserManage' });
 
-const searchParams = reactive(getInitSearchParams());
+const searchParams = ref(getInitSearchParams());
 
 function getInitSearchParams(): Api.SystemManage.UserSearchParams {
   return {
@@ -27,16 +27,16 @@ function getInitSearchParams(): Api.SystemManage.UserSearchParams {
 
 const { columns, columnChecks, data, getData, getDataByPage, loading, mobilePagination } = useUIPaginatedTable({
   paginationProps: {
-    currentPage: searchParams.current,
-    pageSize: searchParams.size
+    currentPage: searchParams.value.current,
+    pageSize: searchParams.value.size
   },
-  api: () => fetchGetUserList(searchParams),
+  api: () => fetchGetUserList(searchParams.value),
   transform: response => {
     return defaultTransform(response);
   },
   onPaginationParamsChange: params => {
-    searchParams.current = params.currentPage;
-    searchParams.size = params.pageSize;
+    searchParams.value.current = params.currentPage;
+    searchParams.value.size = params.pageSize;
   },
   columns: () => [
     { prop: 'selection', type: 'selection', width: 48 },
@@ -136,7 +136,7 @@ function handleDelete(id: number) {
 }
 
 function resetSearchParams() {
-  Object.assign(searchParams, getInitSearchParams());
+  searchParams.value = getInitSearchParams();
 }
 
 function edit(id: number) {
