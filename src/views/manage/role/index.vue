@@ -1,5 +1,5 @@
 <script setup lang="tsx">
-import { reactive } from 'vue';
+import { ref } from 'vue';
 import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { enableStatusRecord } from '@/constants/business';
 import { fetchGetRoleList } from '@/service/api';
@@ -8,7 +8,7 @@ import { $t } from '@/locales';
 import RoleOperateDrawer from './modules/role-operate-drawer.vue';
 import RoleSearch from './modules/role-search.vue';
 
-const searchParams = reactive(getInitSearchParams());
+const searchParams = ref(getInitSearchParams());
 
 function getInitSearchParams(): Api.SystemManage.RoleSearchParams {
   return {
@@ -22,14 +22,14 @@ function getInitSearchParams(): Api.SystemManage.RoleSearchParams {
 
 const { columns, columnChecks, data, loading, getData, getDataByPage, mobilePagination } = useUIPaginatedTable({
   paginationProps: {
-    currentPage: searchParams.current,
-    pageSize: searchParams.size
+    currentPage: searchParams.value.current,
+    pageSize: searchParams.value.size
   },
-  api: () => fetchGetRoleList(searchParams),
+  api: () => fetchGetRoleList(searchParams.value),
   transform: response => defaultTransform(response),
   onPaginationParamsChange: params => {
-    searchParams.current = params.currentPage;
-    searchParams.size = params.pageSize;
+    searchParams.value.current = params.currentPage;
+    searchParams.value.size = params.pageSize;
   },
   columns: () => [
     { prop: 'selection', type: 'selection', width: 48 },
@@ -110,7 +110,7 @@ function handleDelete(id: number) {
 }
 
 function resetSearchParams() {
-  Object.assign(searchParams, getInitSearchParams());
+  searchParams.value = getInitSearchParams();
 }
 
 function edit(id: number) {
