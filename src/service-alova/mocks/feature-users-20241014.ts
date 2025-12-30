@@ -1,6 +1,7 @@
 import { defineMock } from '@sa/alova/mock';
 
 // you can separate the mock data into multiple files dependent on your project versions
+// if you want to disable the mock data, see https://alova.js.org/zh-CN/resource/request-adapter/alova-mock/#%E7%A6%81%E7%94%A8mock-api
 export default defineMock({
   '[POST]/systemManage/addUser': () => {
     return {
