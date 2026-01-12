@@ -152,7 +152,8 @@ export type LayoutScrollMode = 'wrapper' | 'content';
 
 /** Admin layout props */
 export interface AdminLayoutProps
-  extends AdminLayoutHeaderConfig,
+  extends
+    AdminLayoutHeaderConfig,
     AdminLayoutTabConfig,
     AdminLayoutSiderConfig,
     AdminLayoutContentConfig,
