@@ -1,7 +1,7 @@
 {
   "name": "@sa/elp",
   "type": "module",
-  "version": "1.3.15",
+  "version": "1.4.0",
   "description": "A fresh and elegant admin template, based on Vue3、Vite7、rolldown-vite、TypeScript、ElementPlus and UnoCSS. 一个基于Vue3、Vite7、rolldown-vite、TypeScript、ElementPlus and UnoCSS的清新优雅的中后台模版。",
   "author": {
     "name": "Soybean",

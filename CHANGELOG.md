@@ -1,6 +1,178 @@
 # Changelog
 
 
+## [v1.4.0](https://github.com/skyfeiz/soybean-admin-elp/compare/v1.4.0...main) (2026-01-12)
+
+### &nbsp;&nbsp;&nbsp;🚀 Features
+
+- **docs**:
+  - add GitCode star badge to README files &nbsp;-&nbsp; by @soybeanjs [<samp>(a2e1b)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/a2e1b6b)
+  - update QQ group image in README &nbsp;-&nbsp; by @soybeanjs [<samp>(ecc71)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/ecc71eb)
+- **projects**:
+  - init project &nbsp;-&nbsp; by @soybeanjs [<samp>(7d09c)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/7d09cad)
+  - element-plus theme color and dark mode &nbsp;-&nbsp; by @soybeanjs [<samp>(464b5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/464b54b)
+  - nprogress color feat theme color &nbsp;-&nbsp; by @soybeanjs [<samp>(900db)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/900dbf1)
+  - perf route meta and route i18n &nbsp;-&nbsp; by @soybeanjs [<samp>(68dfb)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/68dfbc7)
+  - 🎉  init project &nbsp;-&nbsp; by **skyfeiz** [<samp>(cd8d3)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/cd8d32c)
+  - ✨ sync add alova examples &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/8 [<samp>(6ec48)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/6ec48cb)
+  - ✨  sync add antv g6 example &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/11 [<samp>(bed44)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/bed44e3)
+  - sync add vchart demo & use global ElCard shadow &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/15 [<samp>(4de34)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/4de34f5)
+  - ✨  sync support scheduled detection and update system. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/19 [<samp>(397f6)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/397f67a)
+  - ✨  add link to ElementPlus document &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/20 [<samp>(4a4b8)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/4a4b877)
+  - ✨  sync add VTable plugin &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/24 [<samp>(cb966)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/cb96639)
+  - ✨  sync add VTableGantt &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/31 [<samp>(f32b6)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f32b675)
+  - ✨  multi language buttons support hiding &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/44 [<samp>(312c0)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/312c0e2)
+  - ✨  support loading page dark mode adaptation &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/56 [<samp>(62282)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/622820f)
+  - ✨  Adjust the display duration of the update notification. Fixed [#79] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/79 [<samp>(66aab)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/66aab7e)
+  - ✨  support vite devtools specify the editor by launchEditor option. &nbsp;-&nbsp; by **一寸灰** [<samp>(a1455)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/a14550e)
+  - ✨  clear tabs cache when switching users. &nbsp;-&nbsp; by **一寸灰** [<samp>(311bd)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/311bd75)
+  - ✨ sync global search button toggle. &nbsp;-&nbsp; by **一寸灰** [<samp>(8abee)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/8abee1b)
+  - ✨ add configurable user name watermark option. &nbsp;-&nbsp; by **一寸灰** [<samp>(3e65c)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/3e65cd3)
+  - 🔥  optimize tabs cache cleaning strategy. fixed [#165] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/165 [<samp>(b857e)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b857ed8)
+  - use new logo &nbsp;-&nbsp; by @soybeanjs [<samp>(b5052)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b5052e1)
+- **styles**:
+  - Page format abnormality issue when updating column settings to a large number &nbsp;-&nbsp; by @YSH0313 and **袁少航** in https://github.com/skyfeiz/soybean-admin-elp/issues/102 [<samp>(325a7)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/325a7f5)
+- **types**:
+  - ✨  enhance Option type to support customizable label types. &nbsp;-&nbsp; by **一寸灰** [<samp>(d96db)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/d96db31)
+
+### &nbsp;&nbsp;&nbsp;🐞 Bug Fixes
+
+- **deps**:
+  - 🐛  fix lint error. [#63] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/63 [<samp>(77741)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/77741e3)
+- **docs**:
+  - update project name in ecosystem section of README &nbsp;-&nbsp; by @soybeanjs [<samp>(ce1d6)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/ce1d6d4)
+- **manager**:
+  - change usage of ElCollapse and shrink height &nbsp;-&nbsp; by @Onlylonger in https://github.com/skyfeiz/soybean-admin-elp/issues/29 [<samp>(30b5c)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/30b5c93)
+- **other**:
+  - ✏️  add a comment regarding disabling mock data. fixed [#162] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/162 [<samp>(b36cd)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b36cd2f)
+- **packages**:
+  - 🐛  fix full-content display issues when fixedHeaderAndTab is false. fixed [#131] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/131 [<samp>(f8465)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f8465da)
+  - 🐛  axios: fix json response. fixed [#157] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/157 [<samp>(7228e)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/7228e09)
+- **projects**:
+  - 🐛  fix ElConfigProvider warning &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/10 [<samp>(5e50a)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/5e50a05)
+  - 🐛  home tab disabled &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/16 [<samp>(cffb5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/cffb5c1)
+  - 🐛  fix global-search input auto focus &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/18 [<samp>(799eb)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/799eb81)
+  - 🐛  check if init userInfo when initAuthRoute &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/22 [<samp>(e29c4)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e29c4be)
+  - 🐛  fix plugin/copy ElInputGroup warning &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/23 [<samp>(14645)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/14645ab)
+  - 🐛  fix gantt chart change &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/26 [<samp>(d7bcf)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/d7bcf24)
+  - 🐛  adjust the display of ElPagination total &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/27 [<samp>(ccfda)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/ccfda40)
+  - 🐛  fix dialog can`t be closed in manager/role &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/35 [<samp>(4ce02)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/4ce0292)
+  - 🐛  check if init userInfo when initAuthRoute. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/39 [<samp>(c7669)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/c7669d1)
+  - 🐛  fix ElMenu ellipsis width full &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/41 [<samp>(4561f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/4561ffd)
+  - 🐛  fix login success notification. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/45 [<samp>(c94c8)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/c94c845)
+  - 🐛  fix element-plus style conflicts &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/49 [<samp>(b8b7f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b8b7f4d)
+  - 🐛  add Menu default-openeds. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/58 [<samp>(3831e)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/3831e0f)
+  - 🐛  fix can`t click reverse menus button。[#59] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/60 and https://github.com/skyfeiz/soybean-admin-elp/issues/59 [<samp>(2ab97)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/2ab9737)
+  - 🐛  fix active tab switch issue after removal. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/72 [<samp>(49e73)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/49e73a0)
+  - fix example page ElCard slot name error. &nbsp;-&nbsp; by @MosYCo and **yuyang** in https://github.com/skyfeiz/soybean-admin-elp/issues/74 [<samp>(9cd3a)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9cd3ac5)
+  - 🐛  fix the title in ElCard. &nbsp;-&nbsp; by **一寸灰** [<samp>(e6f04)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e6f04d1)
+  - 🐛  fix responsive issues on the homepage. fixed [#76] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/76 [<samp>(12c82)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/12c82dd)
+  - 🐛  fix the edit echo issue on the menu management page. fixed [#80] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/80 [<samp>(5a7b8)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/5a7b808)
+  - 🐛  set ElMenu collapse-transition false. fixed [#57] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/57 [<samp>(9b935)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9b93514)
+  - 🐛  Fix the external link routing highlighting issue. fixed [#94] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/94 [<samp>(795d2)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/795d2c9)
+  - 🐛  fix menu active issue. fixed [#101][#94] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/101 and https://github.com/skyfeiz/soybean-admin-elp/issues/94 [<samp>(87a11)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/87a113c)
+  - 🐛  fix the error produced when calling the updateSpec method in vchart. fixed [#105] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/105 [<samp>(f52b0)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f52b009)
+  - 🐛  fix menu highlighting in dark theme. fixed [#98] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/98 [<samp>(f1485)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f14854e)
+  - 🐛  fix the menu switching collapse issue. fixed [#111] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/111 [<samp>(020f5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/020f57c)
+  - 🐛  add overflow-y-auto in ElTree. fixed [#113] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/113 [<samp>(25918)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/2591857)
+  - 🐛  fix the menu hover highlight in bg-inverted. fixed [#115] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/115 [<samp>(0e4bb)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/0e4bb80)
+  - 🐛  adjust the read strategy for theme configuration. fixed [#117] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/117 [<samp>(9fe1c)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9fe1c42)
+  - 🐛  fix post-refresh redirect routing issue. fixed [#125] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/125 [<samp>(df114)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/df1143f)
+  - 🐛  adjust the init of pagination. fixed [#149] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/149 [<samp>(35163)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/3516325)
+  - 🐛  fix the column selection mapping error in the column setting. fixed [#155] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/155 [<samp>(6bc6e)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/6bc6e3c)
+  - 🐛  fix display issue in local icon dropdown. &nbsp;-&nbsp; by **一寸灰** [<samp>(275aa)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/275aa48)
+  - 🐛  fix the style disorder of table-column-setting. fixed [#163] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/163 [<samp>(280df)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/280df5f)
+  - 🐛  fix unexpected re-assignment of const variabl &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/168 [<samp>(38b04)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/38b0448)
+
+### &nbsp;&nbsp;&nbsp;🛠 Optimizations
+
+- **hooks**:
+  - 🚸  remove obsolete disabling cache. &nbsp;-&nbsp; by **一寸灰** [<samp>(e19e9)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e19e94d)
+  - update detection function to cover the exceptions that occur when the request fails. fixed [#90] &nbsp;-&nbsp; by @Azir-11 in https://github.com/skyfeiz/soybean-admin-elp/issues/90 [<samp>(5d9a9)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/5d9a9f3)
+- **projects**:
+  - sync manager and login page: use ref replace reactive &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/9 [<samp>(333be)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/333becb)
+  - 🎨  fix warning Component name should always be multi-word &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/46 [<samp>(aceff)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/aceff34)
+- **types**:
+  - 🏷️  fix proxy types. &nbsp;-&nbsp; by **一寸灰** [<samp>(cdc4c)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/cdc4c96)
+
+### &nbsp;&nbsp;&nbsp;💅 Refactors
+
+- **hooks**:
+  - ♻️ sync refactor useCountDown hook. &nbsp;-&nbsp; by **一寸灰** [<samp>(6ae21)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/6ae214c)
+  - ♻️  sync refactor useTable and enhance type definitions. &nbsp;-&nbsp; by **一寸灰** [<samp>(c4cde)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/c4cdee3)
+- **projects**:
+  - refactor element-plus color palette &nbsp;-&nbsp; by @soybeanjs [<samp>(6045b)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/6045b6f)
+  - ♻️  sync refactor router guard. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/17 [<samp>(840e5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/840e5f0)
+  - 🔥  remove unused lifecycle hooks and clean up script setup. &nbsp;-&nbsp; by **一寸灰** [<samp>(c420f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/c420f37)
+
+### &nbsp;&nbsp;&nbsp;📖 Documentation
+
+- **projects**:
+  - ✏️  set the Chinese version of README as default &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/14 [<samp>(2e72f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/2e72f7b)
+  - update README. &nbsp;-&nbsp; by @Azir-11 [<samp>(3f127)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/3f127be)
+  - add gitcode link &nbsp;-&nbsp; by @soybeanjs [<samp>(f8a20)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f8a2045)
+  - ✏️  update the Vite version of the project description. &nbsp;-&nbsp; by **一寸灰** [<samp>(c95d5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/c95d5f9)
+  - ✏️  add github trendshift info. &nbsp;-&nbsp; by **一寸灰** [<samp>(211ae)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/211ae7d)
+
+### &nbsp;&nbsp;&nbsp;📦 Build
+
+- **deps**:
+  - 📦️  Restrict the minimum Node.js version. &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/66 [<samp>(223b5)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/223b5d1)
+  - ⬆️  vite7 -> rolldown-vite &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/167 [<samp>(4ebea)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/4ebea89)
+- **packages**:
+  - ⬇️ downgrade pnpm and typescript version. fixed [#151] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/151 [<samp>(9fb04)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9fb04b8)
+
+### &nbsp;&nbsp;&nbsp;🏡 Chore
+
+- **deps**:
+  - update deps &nbsp;-&nbsp; by @soybeanjs [<samp>(e0612)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e0612bf)
+  - ⬆️  update sass &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/50 [<samp>(223bb)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/223bb5e)
+  - ⬆️  update deps. &nbsp;-&nbsp; by **一寸灰** [<samp>(a052b)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/a052b57)
+- **other**:
+  - 📦️  adjust package.json website &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/13 [<samp>(9be35)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9be3548)
+  - 🎨  格式化配置修改 &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/36 [<samp>(b79c2)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b79c2d0)
+  - 🐛  sync configuration &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/40 [<samp>(86719)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/867196b)
+  - 🥚 add postbuild print &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/47 [<samp>(571f1)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/571f14d)
+  - 🔧 update the ESLint validation configuration to support more file types. &nbsp;-&nbsp; by **一寸灰** [<samp>(0fd61)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/0fd619c)
+- **projects**:
+  - rename project &nbsp;-&nbsp; by @soybeanjs [<samp>(001ac)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/001ac8b)
+  - add pnpm-lock &nbsp;-&nbsp; by @soybeanjs [<samp>(a7e8f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/a7e8fa3)
+  - update deps & update config &nbsp;-&nbsp; by @soybeanjs [<samp>(b52dd)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b52dd15)
+  - ⬆️  update deps &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/62 [<samp>(57380)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/57380e1)
+  - ⬆️  update vscode settings and launch. &nbsp;-&nbsp; by **一寸灰** [<samp>(60c52)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/60c527d)
+- **styles**:
+  - 🐛  add .gitattributes &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/37 [<samp>(72ef6)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/72ef6fa)
+  - 🔧  sync add .editorconfig &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/38 [<samp>(270de)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/270debc)
+- **types**:
+  - 🔧  rename env.d.ts to vite-env.d.ts &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/33 [<samp>(9de4f)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/9de4f43)
+
+### &nbsp;&nbsp;&nbsp;🎨 Styles
+
+- improve the coverage of theme colors. &nbsp;-&nbsp; by @Gahotx [<samp>(8c215)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/8c215bf)
+- **projects**:
+  - remove card shadow &nbsp;-&nbsp; by @soybeanjs [<samp>(b93a1)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/b93a1e4)
+  - 🎨  ElTable use global align &nbsp;-&nbsp; by **skyfeiz** [<samp>(f62b2)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/f62b2ac)
+  - 🎨  modify table icon in the menu &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/25 [<samp>(e9a25)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e9a2505)
+  - 🎨  fix eslint warning &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/51 [<samp>(e25ce)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/e25ce95)
+  - 💄  adjust form label styles. fixed [#68] &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/68 [<samp>(6fe03)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/6fe03cc)
+- **styles**:
+  - 💄  change search title size &nbsp;-&nbsp; by **skyfeiz** [<samp>(51a73)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/51a73cc)
+  - 💄  set transpatent bg for ElButton in dark theme &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/6 [<samp>(2e826)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/2e826a0)
+  - 💄  adjust home style &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/7 [<samp>(0e522)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/0e522d0)
+  - 💄  adjust ElSubmenu margin-top &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/21 [<samp>(cede4)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/cede4f0)
+  - 💄  adjust the spacing between header button &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/28 [<samp>(305d8)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/305d840)
+  - 💄  fix table automatic height &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/30 [<samp>(fc7bd)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/fc7bdf2)
+  - 💄  fix the spacing between header button &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/42 [<samp>(907eb)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/907eb79)
+
+### &nbsp;&nbsp;&nbsp;🤖 CI
+
+- **other**: ✨  display the actual request url in terminal &nbsp;-&nbsp; by **一寸灰** in https://github.com/skyfeiz/soybean-admin-elp/issues/52 [<samp>(313f1)</samp>](https://github.com/skyfeiz/soybean-admin-elp/commit/313f150)
+
+### &nbsp;&nbsp;&nbsp;❤️ Contributors
+
+[![soybeanjs](https://github.com/soybeanjs.png?size=48)](https://github.com/soybeanjs)&nbsp;&nbsp;[![Gahotx](https://github.com/Gahotx.png?size=48)](https://github.com/Gahotx)&nbsp;&nbsp;[![YSH0313](https://github.com/YSH0313.png?size=48)](https://github.com/YSH0313)&nbsp;&nbsp;[![Azir-11](https://github.com/Azir-11.png?size=48)](https://github.com/Azir-11)&nbsp;&nbsp;[![MosYCo](https://github.com/MosYCo.png?size=48)](https://github.com/MosYCo)&nbsp;&nbsp;[![Onlylonger](https://github.com/Onlylonger.png?size=48)](https://github.com/Onlylonger)&nbsp;&nbsp;
+[一寸灰](mailto:webyicunhui@outlook.com),&nbsp;[袁少航](mailto:yuanshaohang@dataoceanai.com),&nbsp;[yuyang](mailto:yuyang@7moor.com),&nbsp;[一寸灰](mailto:webzhangfei@163.com),&nbsp;
+
 ## [v1.3.15](https://github.com/skyfeiz/soybean-admin-element-plus/compare/v1.3.14...v1.3.15) (2025-09-02)
 
 ### &nbsp;&nbsp;&nbsp;🚀 Features
