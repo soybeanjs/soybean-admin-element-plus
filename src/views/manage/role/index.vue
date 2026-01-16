@@ -121,7 +121,7 @@ function edit(id: number) {
 <template>
   <div class="min-h-500px flex-col-stretch gap-16px overflow-hidden lt-sm:overflow-auto">
     <RoleSearch v-model:model="searchParams" @reset="resetSearchParams" @search="getDataByPage" />
-    <ElCard class="card-wrapper sm:flex-1-hidden" body-class="ht50">
+    <ElCard class="card-wrapper sm:flex-1-hidden">
       <template #header>
         <div class="flex items-center justify-between">
           <p>{{ $t('page.manage.role.title') }}</p>
@@ -135,7 +135,7 @@ function edit(id: number) {
           />
         </div>
       </template>
-      <div class="h-[calc(100%-50px)]">
+      <div class="h-[calc(100%-52px)]">
         <ElTable
           v-loading="loading"
           height="100%"
