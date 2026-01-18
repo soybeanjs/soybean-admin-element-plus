@@ -22,10 +22,14 @@ const { defaultRequiredRule } = useFormRules();
 
 type Model = Api.SystemManage.SmsTestSendDto;
 
-const model = ref<Model>({
+type FormModel = Omit<Model, 'purpose'> & {
+  purpose?: number;
+};
+
+const model = ref<FormModel>({
   phone: '',
   appType: props.initialAppType ?? '',
-  purpose: 0,
+  purpose: undefined,
   code: ''
 });
 
@@ -43,7 +47,7 @@ function resetModel() {
   model.value = {
     phone: '',
     appType: props.initialAppType ?? '',
-    purpose: 0,
+    purpose: undefined,
     code: ''
   };
 }
@@ -54,7 +58,7 @@ async function handleSubmit() {
   const data = await fetchSendSmsTestCode({
     phone: model.value.phone,
     appType: model.value.appType,
-    purpose: model.value.purpose,
+    purpose: model.value.purpose!,
     code: model.value.code || undefined
   });
 

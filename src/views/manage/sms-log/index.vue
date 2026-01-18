@@ -5,6 +5,7 @@ import { fetchDeleteSmsLog, fetchGetSmsLogList } from '@/service/api';
 import { useTableOperate, useUIPaginatedTable } from '@/hooks/common/table';
 import { $t } from '@/locales';
 import SystemEnumTag from '@/components/custom/system-enum-tag.vue';
+import TimeFormatter from '@/components/common/time-formatter.vue';
 import SmsLogSearch from './modules/sms-log-search.vue';
 
 defineOptions({ name: 'SmsLogManage' });
@@ -46,15 +47,16 @@ const { columns, columnChecks, data, getData, loading, mobilePagination } = useU
       prop: 'success',
       label: '发送状态',
       width: 100,
-      formatter: row => (
-        <ElTag type={row.success ? 'success' : 'danger'}>
-          {row.success ? '成功' : '失败'}
-        </ElTag>
-      )
+      formatter: row => <ElTag type={row.success ? 'success' : 'danger'}>{row.success ? '成功' : '失败'}</ElTag>
     },
     { prop: 'message', label: '返回信息', minWidth: 150, showOverflowTooltip: true },
     { prop: 'clientIP', label: '发送IP', minWidth: 120 },
-    { prop: 'createdTime', label: '发送时间', minWidth: 160 },
+    {
+      prop: 'createdAt',
+      label: '发送时间',
+      minWidth: 160,
+      formatter: row => <TimeFormatter time={row.createdAt} />
+    },
     {
       prop: 'operate',
       label: $t('common.operate'),
