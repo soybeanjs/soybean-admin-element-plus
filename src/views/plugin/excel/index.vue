@@ -150,7 +150,7 @@ function isTableColumnHasTitle<T>(column: UI.TableColumn<T>): boolean {
           </ElButton>
         </div>
       </template>
-      <div class="h-[calc(100%-50px)]">
+      <div class="h-[calc(100%-52px)]">
         <ElTable v-loading="loading" height="100%" border class="sm:h-full" :data="data" row-key="id">
           <ElTableColumn v-for="col in columns" :key="col.prop" v-bind="col" />
         </ElTable>
