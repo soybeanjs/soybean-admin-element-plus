@@ -45,6 +45,7 @@ export function setupAppVersionNotification() {
             {
               onClick() {
                 n?.close();
+                isShow = false;
               }
             },
             () => $t('system.updateCancel')
@@ -60,7 +61,12 @@ export function setupAppVersionNotification() {
             () => $t('system.updateConfirm')
           )
         ])
-      ])
+      ],
+
+      ),
+      onClose() {
+        isShow = false;
+      }
     });
   };
   const startUpdateInterval = () => {
