@@ -61,9 +61,7 @@ export function setupAppVersionNotification() {
             () => $t('system.updateConfirm')
           )
         ])
-      ],
-
-      ),
+      ]),
       onClose() {
         isShow = false;
       }
