@@ -1,6 +1,5 @@
 <script setup lang="tsx">
 import { reactive } from 'vue';
-import { ElButton, ElTag } from 'element-plus';
 import { utils, writeFile } from 'xlsx';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { fetchGetUserList } from '@/service/api';

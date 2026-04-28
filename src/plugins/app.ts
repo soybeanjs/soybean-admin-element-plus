@@ -1,6 +1,5 @@
 import { h } from 'vue';
 import type { App } from 'vue';
-import { ElButton } from 'element-plus';
 import { $t } from '@/locales';
 
 export function setupAppErrorHandle(app: App) {

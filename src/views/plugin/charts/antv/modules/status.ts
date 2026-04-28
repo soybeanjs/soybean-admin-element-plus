@@ -1,5 +1,4 @@
 import { h } from 'vue';
-import { ElTag } from 'element-plus';
 import type { TagProps } from 'element-plus';
 import type { CustomNodeData, NodeStatus } from './types';
 

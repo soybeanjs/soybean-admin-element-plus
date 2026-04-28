@@ -1,6 +1,5 @@
 <script setup lang="tsx">
 import { ref } from 'vue';
-import { ElButton, ElPopconfirm, ElTag } from 'element-plus';
 import { usePagination } from '@sa/alova/client';
 import { enableStatusRecord, userGenderRecord } from '@/constants/business';
 import { batchDeleteUser, deleteUser, fetchGetUserList } from '@/service-alova/api';

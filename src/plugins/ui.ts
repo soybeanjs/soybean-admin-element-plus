@@ -1,6 +1,3 @@
-import type { App } from 'vue';
-import ElementPlus, { ElCard, ElForm, ElTable } from 'element-plus';
-
 /** global table column align */
 ElTable.TableColumn.props.align = {
   type: String,
@@ -17,9 +14,4 @@ ElCard.props.shadow = {
 ElForm.props.requireAsteriskPosition = {
   type: String,
   default: 'right'
-};
-
-/** full import ElementPlus */
-export const setupUI = (app: App) => {
-  app.use(ElementPlus);
 };
