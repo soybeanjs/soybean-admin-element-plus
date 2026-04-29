@@ -30,13 +30,12 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
     }),
     AutoImport({
       dts: 'src/typings/auto-imports.d.ts',
-      // ntentionally empty: avoid implicit global APIs
-      imports: [],
-      // disabled: we do NOT want directory-based magic imports
-      dirs: [],
       resolvers: [
         // Element Plus function APIs auto-import
-        ElementPlusResolver()
+        ElementPlusResolver({
+          // no to import style, full import to see /src/plugins/assets.ts
+          importStyle: false
+        })
       ]
     }),
     Components({
@@ -44,7 +43,10 @@ export function setupUnplugin(viteEnv: Env.ImportMeta) {
       types: [{ from: 'vue-router', names: ['RouterLink', 'RouterView'] }],
       resolvers: [
         // auto import Element Plus components
-        ElementPlusResolver(),
+        ElementPlusResolver({
+          // no to import style, full import to see /src/plugins/assets.ts
+          importStyle: false
+        }),
         IconsResolver({ customCollections: [collectionName], componentPrefix: VITE_ICON_PREFIX })
       ]
     }),
