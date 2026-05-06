@@ -20,12 +20,12 @@ export function getColorName(color: string) {
   let name = '';
 
   colorNames.some((item, index) => {
-    const [hexValue, colorName] = item;
+    const [hexValue] = item;
 
     const match = hex === hexValue;
 
     if (match) {
-      name = colorName;
+      cl = index;
     } else {
       const { r, g, b } = getRgb(hexValue);
       const { h, s, l } = getHsl(hexValue);
