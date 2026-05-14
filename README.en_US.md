@@ -17,21 +17,59 @@
   <a href="https://hellogithub.com/repository/1298f27d5fe54959a16cf9686516ddb3" target="_blank"><img src="https://abroad.hellogithub.com/v1/widgets/recommend.svg?rid=1298f27d5fe54959a16cf9686516ddb3&claim_uid=IiDXWmP4TEntjbV" alt="Featured｜HelloGitHub" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 </div>
 
-
 > [!NOTE]
 > If you think `SoybeanAdmin` is helpful to you, or you like our project, please give us a ⭐️ on GitHub. Your support is the driving force for us to continue to improve and add new features! Thank you for your support!
 
 > [!NOTE]
 > The `SoybeanAdmin` quick start series videos have been uploaded to [Bilibili](https://www.bilibili.com/video/BV1YKdRYXELC) Go online [click here](https://www.bilibili.com/video/BV1YKdRYXELC) Go check it out
 
+<div align="center">
+  <table width="100%">
+    <tr>
+      <td align="left">
+        <table>
+          <tr>
+            <td>
+              <a href="https://ui.soybeanjs.cn">
+                <img alt="SoybeanUI" src="./public/favicon.svg" width="52" />
+              </a>
+            </td>
+            <td>
+              <a href="https://ui.soybeanjs.cn">
+                <img
+                  alt="SoybeanUI"
+                  src="https://img.shields.io/badge/SoybeanUI-Headless%20%2B%20UI-6366f1?style=for-the-badge&labelColor=312e81"
+                />
+              </a>
+            </td>
+          </tr>
+        </table>
+        <strong>A powerful and elegant component system for Vue 3, delivering headless interaction capabilities and ready-to-use style encapsulation.</strong><br />
+        <sub>Built on a two-layer Headless + UI architecture to reuse interaction capabilities and unify interface expression.</sub>
+        <br /><br />
+        <img alt="Vue 3" src="https://img.shields.io/badge/Vue%203-Component%20Library-6366f1?style=flat-square&labelColor=4338ca" />
+        <img alt="Headless" src="https://img.shields.io/badge/Headless-Logic%20%26%20State-818cf8?style=flat-square&labelColor=3730a3" />
+        <img alt="Admin" src="https://img.shields.io/badge/Admin-Professional%20UI-a5b4fc?style=flat-square&labelColor=4f46e5" />
+      </td>
+      <td align="right">
+        <a href="https://ui.soybeanjs.cn">
+          <img
+            alt="Visit SoybeanUI"
+            src="https://img.shields.io/badge/Visit-ui.soybeanjs.cn-6366f1?style=for-the-badge&labelColor=312e81&logo=vercel&logoColor=white"
+          />
+        </a>
+      </td>
+    </tr>
+  </table>
+</div>
+
 ## Introduction
 
-[`SoybeanAdmin`](https://github.com/soybeanjs/soybean-admin) is a clean, elegant, beautiful and powerful admin template, based on the latest front-end technology stack, including Vue3, Vite7, TypeScript, Pinia and UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. `SoybeanAdmin` provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.
-
+[`SoybeanAdmin`](https://github.com/soybeanjs/soybean-admin) is a clean, elegant, beautiful and powerful admin template, based on the latest front-end technology stack, including Vue3, Vite8, TypeScript, Pinia and UnoCSS. It has built-in rich theme configuration and components, strict code specifications, and an automated file routing system. In addition, it also uses the online mock data solution based on ApiFox. `SoybeanAdmin` provides you with a one-stop admin solution, no additional configuration, and out of the box. It is also a best practice for learning cutting-edge technologies quickly.
 
 ## Features
 
-- **Cutting-edge technology application**: using the latest popular technology stack such as Vue3, Vite7, TypeScript, Pinia and UnoCSS.
+- **Cutting-edge technology application**: using the latest popular technology stack such as Vue3, Vite8, TypeScript, Pinia and UnoCSS.
 - **Clear project architecture**: using pnpm monorepo architecture, clear structure, elegant and easy to understand.
 - **Strict code specifications**: follow the [SoybeanJS specification](https://docs.soybeanjs.cn/standard), integrate eslint, prettier and simple-git-hooks to ensure the code is standardized.
 - **TypeScript**: support strict type checking to improve code maintainability.
@@ -42,7 +80,6 @@
 - **Rich page components**: built-in a variety of pages and components, including 403, 404, 500 pages, as well as layout components, tag components, theme configuration components, etc.
 - **Command line tool**: built-in efficient command line tool, git commit, delete file, release, etc.
 - **Mobile adaptation**: perfectly support mobile terminal to realize adaptive layout.
-
 
 ## Version
 
@@ -70,7 +107,6 @@
   - [Gitee Repository](https://gitee.com/honghuangdc/soybean-admin/tree/legacy)
   - [Gitcode Repository](https://gitcode.com/soybeanjs/soybean-admin/tree/legacy)
 
-
 ## Documentation
 
 - [Link](https://docs.soybeanjs.cn)
@@ -89,7 +125,6 @@
 ![](https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/soybean-admin-v1-09.png)
 ![](https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/soybean-admin-v1-10.png)
 ![](https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/soybean-admin-v1-mobile.png)
-
 
 ## Usage
 
@@ -117,6 +152,7 @@ git clone https://gitcode.com/soybeanjs/soybean-admin.git
 ```bash
 pnpm i
 ```
+
 > Since this project uses the pnpm monorepo management method, please do not use npm or yarn to install dependencies.
 
 **Start Project**
@@ -130,6 +166,10 @@ pnpm dev
 ```bash
 pnpm build
 ```
+
+**Code Synchronization**
+
+Refer to the [Code Synchronization](https://docs.soybeanjs.cn/guide/sync) document.
 
 ## Ecosystem
 
@@ -146,6 +186,8 @@ pnpm build
 - [soybean-admin-go](https://github.com/WgoW/soybean-admin-go):A Go backend service developed based on the Gin and GORM frameworks, integrated with the example branch of Soybean Admin. It supports dynamic routing and API permission authentication.
 - [soybean-admin-element-plus-skill](https://github.com/a596544022/soybean-admin-element-plus-skill): This is a skill package for quickly generating standard CRUD management pages in soybean-admin-element-plus projects, or other Vue 3 + Element Plus projects.
 
+More ecosystem please refer to [Ecosystem](https://docs.soybeanjs.cn/awesome) document.
+
 ## How to Contribute
 
 We warmly welcome and appreciate all forms of contributions. If you have any ideas or suggestions, please feel free to share them by submitting [pull requests](https://github.com/soybeanjs/soybean-admin/pulls) or creating GitHub [issue](https://github.com/soybeanjs/soybean-admin/issues/new).
@@ -159,8 +201,8 @@ This project has built-in `commit` command, you can execute `pnpm commit` to gen
 It is recommended to use the latest version of Chrome in development for a better experience.
 
 | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/archive/internet-explorer_9-11/internet-explorer_9-11_48x48.png" alt="IE" width="24px" height="24px"  />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/edge/edge_48x48.png" alt=" Edge" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/firefox/firefox_48x48.png" alt="Firefox" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/chrome/chrome_48x48.png" alt="Chrome" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/) | [<img src="https://raw.githubusercontent.com/alrra/browser-logos/master/src/safari/safari_48x48.png" alt="Safari" width="24px" height="24px" />](http://godban.github.io/browsers-support-badges/) |
-| --- | --- | --- | --- | --- |
-| not support | last 2 versions | last 2 versions | last 2 versions | last 2 versions |
+| --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| not support                                                                                                                                                                                                                             | last 2 versions                                                                                                                                                                               | last 2 versions                                                                                                                                                                                       | last 2 versions                                                                                                                                                                                    | last 2 versions                                                                                                                                                                                    |
 
 ## OpenSource Author
 
@@ -170,30 +212,30 @@ It is recommended to use the latest version of Chrome in development for a bette
 
 Thanks the following people for their contributions. If you want to contribute to this project, please refer to [How to Contribute](#how-to-contribute).
 
-<a href="https://github.com/soybeanjs/soybean-admin/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=soybeanjs/soybean-admin" />
+<a href="https://github.com/soybeanjs/soybean-admin-element-plus/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=soybeanjs/soybean-admin-element-plus" />
+</a>
+
+---
+
+Here are the most active contributors from the past year. Thank you all for your support, which has enabled the project's continued development.
+
+<a href="https://openomy.com/soybeanjs/soybean-admin-element-plus" target="_blank" style="display: block; width: 100%;" align="center">
+  <img src="https://www.openomy.com/svg?repo=soybeanjs/soybean-admin-element-plus&chart=list&latestMonth=12" target="_blank" alt="Contribution Leaderboard" style="display: block; width: 100%;" />
 </a>
 
 ## Communication
 
-`SoybeanAdmin` is a completely open source and free project, helping developers to develop medium and large-scale management systems more conveniently. It also provides WeChat and QQ communication groups. If you have any questions, please feel free to ask in the group.
+`SoybeanAdmin` is a completely open source and free project, helping developers to develop medium and large-scale management systems more conveniently. It provides FeiShu communication groups. If you have any questions, please feel free to ask in the group.
 
   <div>
-  	<p>QQ Group</p>
-    <img src="https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/qq-soybean-admin-5.jpg" style="width:200px" />
+  	<p>FeiShu Group</p>
+    <img src="https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/feishu-soybean-admin.png" style="width:200px" />
   </div>
-	<!-- <div>
-		<p>WeChat Group</p>
-		<img src="https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/picgo/soybean-admin-wechat-0620.jpg" style="width:200px" />
-	</div> -->
-	<div>
-		<p>Add the following WeChat to invite to the WeChat group</p>
-		<img src="https://soybeanjs-1300612522.cos.ap-guangzhou.myqcloud.com/uPic/wechat-soybeanjs.jpg" style="width:200px" />
-	</div>
 
 ## Star Trend
 
-[![Star History Chart](https://api.star-history.com/svg?repos=soybeanjs/soybean-admin&type=Date)](https://star-history.com/#soybeanjs/soybean-admin&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=soybeanjs/soybean-admin-element-plus&type=Date)](https://star-history.com/#soybeanjs/soybean-admin-element-plus&Date)
 
 ## License
 
