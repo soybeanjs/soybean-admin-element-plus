@@ -262,7 +262,7 @@ pnpm build
 
 ## Star 趋势
 
-[![Star History Chart](https://api.star-history.com/svg?repos=soybeanjs/soybean-admin-element-plus&type=Date)](https://star-history.com/#soybeanjs/soybean-admin-element-plus&Date)
+[![Star History Chart](https://star-history.dera.page/svg?repos=soybeanjs/soybean-admin-element-plus&type=Date)](https://star-history.dera.page/#soybeanjs/soybean-admin-element-plus&Date)
 
 ## 开源协议
 
