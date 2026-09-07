@@ -185,6 +185,7 @@ Refer to the [Code Synchronization](https://docs.soybeanjs.cn/guide/sync) docume
 - [ba](https://github.com/xiatianYa/Ba-Server): Backend service docking with soybean admin based on goFrame framework, adapted to dynamic routing, and interface authentication permissions.
 - [soybean-admin-go](https://github.com/WgoW/soybean-admin-go):A Go backend service developed based on the Gin and GORM frameworks, integrated with the example branch of Soybean Admin. It supports dynamic routing and API permission authentication.
 - [soybean-admin-element-plus-skill](https://github.com/a596544022/soybean-admin-element-plus-skill): This is a skill package for quickly generating standard CRUD management pages in soybean-admin-element-plus projects, or other Vue 3 + Element Plus projects.
+- [SpringbootSoybeanadmin](https://github.com/Zx357/SpringbootSoybeanadmin): A front-end and back-end separated admin system. The backend is built with Spring Boot (RuoYi-Vue), and the frontend migrates all RuoYi pages to the soybean-admin-element-plus template, implementing user/role/menu management with dynamic routing and button-level permission control.
 
 More ecosystem please refer to [Ecosystem](https://docs.soybeanjs.cn/awesome) document.
 

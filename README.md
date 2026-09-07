@@ -211,6 +211,7 @@ pnpm build
 - [soybean-admin-go](https://github.com/WgoW/soybean-admin-go):基于gin+gorm框架开发的go语言后端服务对接soybean-admin的example分支,适配动态路由,接口鉴权限。
 
 - [soybean-admin-element-plus-skill](https://github.com/a596544022/soybean-admin-element-plus-skill): 这是一个用于在 soybean-admin-element-plus 项目，或其他 Vue 3 + Element Plus 项目中快速生成标准 CRUD 管理页面的 skill 包。
+- [SpringbootSoybeanadmin](https://github.com/Zx357/SpringbootSoybeanadmin): 一个前后端分离的后台管理系统。后端采用 Spring Boot（若依 RuoYi-Vue），前端基于 soybean-admin-element-plus 模板将若依功能页面整体迁移美化，实现用户、角色、菜单管理，适配动态路由与按钮级权限。
 
 
 更多周边生态请翻阅 [周边生态](https://docs.soybeanjs.cn/zh/awesome) 文档。
